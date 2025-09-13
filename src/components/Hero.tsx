@@ -9,20 +9,20 @@ export function Hero() {
       <div className="max-w-5xl mx-auto px-6 text-center">
         {/* Logo/Brand */}
         <motion.div 
-          className="mb-12"
+          className="mb-8 md:mb-12"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <h1 className="text-7xl font-black mb-4 gradient-uf-text">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-4 gradient-uf-text">
             Kampus.fun
           </h1>
-          <div className="w-32 h-2 mx-auto rounded-full gradient-uf-primary"></div>
+          <div className="w-20 sm:w-24 md:w-32 h-2 mx-auto rounded-full gradient-uf-primary"></div>
         </motion.div>
 
         {/* Main Tagline */}
         <motion.h2 
-          className="text-6xl font-black mb-8 leading-tight text-gray-800"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-6 md:mb-8 leading-tight text-gray-800"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
@@ -32,7 +32,7 @@ export function Hero() {
 
         {/* Subtext with emojis */}
         <motion.p 
-          className="text-2xl mb-16 max-w-3xl mx-auto text-gray-600 font-medium"
+          className="text-lg sm:text-xl md:text-2xl mb-12 md:mb-16 max-w-3xl mx-auto text-gray-600 font-medium px-4"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
@@ -48,7 +48,7 @@ export function Hero() {
         >
           <Button 
             size="lg" 
-            className="text-xl px-16 py-8 rounded-full text-white border-none font-bold transform transition-all duration-300 hover:scale-110 hover:shadow-2xl gradient-uf-primary hover:gradient-uf-orange"
+            className="text-lg sm:text-xl px-8 sm:px-12 md:px-16 py-6 sm:py-7 md:py-8 rounded-full text-white border-none font-bold transform transition-all duration-300 hover:scale-110 hover:shadow-2xl gradient-uf-primary hover:gradient-uf-orange"
           >
             Get Started
           </Button>
@@ -56,7 +56,7 @@ export function Hero() {
 
         {/* Decorative floating elements */}
         <motion.div 
-          className="mt-20 flex justify-center space-x-6"
+          className="mt-12 md:mt-20 flex justify-center space-x-4 md:space-x-6"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.8 }}

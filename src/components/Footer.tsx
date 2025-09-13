@@ -3,80 +3,80 @@ import { Instagram, Twitter, Facebook, Mail, Heart } from "lucide-react";
 export function Footer() {
   return (
     <footer className="bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12">
           {/* Brand Section */}
-          <div className="md:col-span-2">
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="w-10 h-10 rounded-xl gradient-uf-primary flex items-center justify-center">
-                <span className="text-white font-bold text-lg">K</span>
+          <div className="sm:col-span-2 lg:col-span-2">
+            <div className="flex items-center space-x-3 mb-4 sm:mb-6">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl gradient-uf-primary flex items-center justify-center">
+                <span className="text-white font-bold text-base sm:text-lg">K</span>
               </div>
-              <span className="text-2xl font-bold">Kampus.fun</span>
+              <span className="text-xl sm:text-2xl font-bold">Kampus.fun</span>
             </div>
-            <p className="text-gray-300 mb-6 max-w-md">
+            <p className="text-gray-300 mb-4 sm:mb-6 max-w-md text-sm sm:text-base">
               Your all-in-one campus hub designed by students, for students. 
               Making university life easier, one app at a time.
             </p>
             
             {/* Social Links */}
-            <div className="flex space-x-4">
+            <div className="flex space-x-3 sm:space-x-4">
               <a 
                 href="#" 
-                className="w-10 h-10 rounded-full bg-white/10 hover:bg-orange-500 flex items-center justify-center transition-all duration-300 hover:scale-110"
+                className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/10 hover:bg-orange-500 flex items-center justify-center transition-all duration-300 hover:scale-110"
               >
-                <Instagram size={18} />
+                <Instagram size={16} className="sm:w-[18px] sm:h-[18px]" />
               </a>
               <a 
                 href="#" 
-                className="w-10 h-10 rounded-full bg-white/10 hover:bg-blue-500 flex items-center justify-center transition-all duration-300 hover:scale-110"
+                className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/10 hover:bg-blue-500 flex items-center justify-center transition-all duration-300 hover:scale-110"
               >
-                <Twitter size={18} />
+                <Twitter size={16} className="sm:w-[18px] sm:h-[18px]" />
               </a>
               <a 
                 href="#" 
-                className="w-10 h-10 rounded-full bg-white/10 hover:bg-blue-600 flex items-center justify-center transition-all duration-300 hover:scale-110"
+                className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/10 hover:bg-blue-600 flex items-center justify-center transition-all duration-300 hover:scale-110"
               >
-                <Facebook size={18} />
+                <Facebook size={16} className="sm:w-[18px] sm:h-[18px]" />
               </a>
               <a 
                 href="#" 
-                className="w-10 h-10 rounded-full bg-white/10 hover:bg-green-500 flex items-center justify-center transition-all duration-300 hover:scale-110"
+                className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/10 hover:bg-green-500 flex items-center justify-center transition-all duration-300 hover:scale-110"
               >
-                <Mail size={18} />
+                <Mail size={16} className="sm:w-[18px] sm:h-[18px]" />
               </a>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold mb-4 text-lg">Quick Links</h4>
-            <ul className="space-y-3">
-              <li><a href="#" className="text-gray-300 hover:text-orange-400 transition-colors">About Us</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-orange-400 transition-colors">Our Apps</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-orange-400 transition-colors">Support</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-orange-400 transition-colors">Privacy Policy</a></li>
+            <h4 className="font-semibold mb-3 sm:mb-4 text-base sm:text-lg">Quick Links</h4>
+            <ul className="space-y-2 sm:space-y-3">
+              <li><a href="#" className="text-gray-300 hover:text-orange-400 transition-colors text-sm sm:text-base">About Us</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-orange-400 transition-colors text-sm sm:text-base">Our Apps</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-orange-400 transition-colors text-sm sm:text-base">Support</a></li>
+              <li><a href="#" className="text-gray-300 hover:text-orange-400 transition-colors text-sm sm:text-base">Privacy Policy</a></li>
             </ul>
           </div>
 
           {/* Contact */}
           <div>
-            <h4 className="font-semibold mb-4 text-lg">Get in Touch</h4>
-            <ul className="space-y-3">
-              <li className="text-gray-300">hellokampus.fun</li>
-              <li className="text-gray-300">University of Florida</li>
-              <li className="text-gray-300">Gainesville, FL</li>
+            <h4 className="font-semibold mb-3 sm:mb-4 text-base sm:text-lg">Get in Touch</h4>
+            <ul className="space-y-2 sm:space-y-3">
+              <li className="text-gray-300 text-sm sm:text-base">hellokampus.fun</li>
+              <li className="text-gray-300 text-sm sm:text-base">University of Florida</li>
+              <li className="text-gray-300 text-sm sm:text-base">Gainesville, FL</li>
             </ul>
           </div>
         </div>
 
         {/* Bottom Section */}
-        <div className="border-t border-gray-700 mt-12 pt-8 text-center">
-          <div className="flex items-center justify-center space-x-2 text-gray-400">
+        <div className="border-t border-gray-700 mt-8 sm:mt-12 pt-6 sm:pt-8 text-center">
+          <div className="flex items-center justify-center space-x-2 text-gray-400 text-sm sm:text-base">
             <span>Made with</span>
-            <Heart size={16} className="text-orange-500 fill-current" />
+            <Heart size={14} className="sm:w-4 sm:h-4 text-orange-500 fill-current" />
             <span>by Gator students</span>
           </div>
-          <p className="text-gray-400 mt-2">
+          <p className="text-gray-400 mt-2 text-xs sm:text-sm">
             © 2024 Kampus.fun. All rights reserved.
           </p>
         </div>
