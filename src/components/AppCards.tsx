@@ -10,10 +10,11 @@ interface AppCardProps {
   description: string;
   accentColor: string;
   gradient: string;
+  url: string;
   index: number;
 }
 
-function AppCard({ emoji, title, description, accentColor, gradient, index }: AppCardProps) {
+function AppCard({ emoji, title, description, accentColor, gradient, url, index }: AppCardProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -21,7 +22,10 @@ function AppCard({ emoji, title, description, accentColor, gradient, index }: Ap
       transition={{ duration: 0.6, delay: index * 0.1 }}
       viewport={{ once: true }}
     >
-      <Card className="group cursor-pointer transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:-translate-y-4 bg-white rounded-3xl border-0 shadow-lg overflow-hidden">
+      <Card 
+        className="group cursor-pointer transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:-translate-y-4 bg-white rounded-3xl border-0 shadow-lg overflow-hidden"
+        onClick={() => window.open(url, '_blank', 'noopener,noreferrer')}
+      >
         <CardContent className="p-10 text-center relative">
           {/* Background gradient on hover */}
           <div className={`absolute inset-0 opacity-0 group-hover:opacity-5 transition-opacity duration-500 ${gradient}`}></div>
@@ -48,6 +52,10 @@ function AppCard({ emoji, title, description, accentColor, gradient, index }: Ap
               backgroundColor: accentColor, 
               color: 'white'
             }}
+            onClick={(e) => {
+              e.stopPropagation();
+              window.open(url, '_blank', 'noopener,noreferrer');
+            }}
           >
             Explore
           </Button>
@@ -62,30 +70,34 @@ export function AppCards() {
     {
       emoji: "🛒",
       title: "GatorEx",
-      description: "Campus marketplace for students",
+      description: "Student only marketplace",
       accentColor: "#FA4616",
-      gradient: "gradient-uf-orange"
+      gradient: "gradient-uf-orange",
+      url: "https://www.gatorex.shop/"
     },
     {
       emoji: "🚗", 
       title: "Rydify",
-      description: "Safe rides around campus",
+      description: "Splitwise for rides",
       accentColor: "#0021A5",
-      gradient: "gradient-uf-blue"
+      gradient: "gradient-uf-blue",
+      url: "http://rydify.co/"
     },
     {
       emoji: "🏡",
       title: "Vybr", 
       description: "Find your perfect housing",
       accentColor: "#FA4616",
-      gradient: "gradient-uf-orange"
+      gradient: "gradient-uf-orange",
+      url: "https://www.vybr.club/"
     },
     {
       emoji: "🎉",
       title: "Tribzy",
       description: "Discover campus events",
       accentColor: "#0021A5",
-      gradient: "gradient-uf-blue"
+      gradient: "gradient-uf-blue",
+      url: "http://tribzy.com/"
     }
   ];
 
