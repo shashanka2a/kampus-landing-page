@@ -1,13 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  experimental: {
-    allowedDevOrigins: ["*"] as const,
-  },
+  // Only apply no-cache to HTML pages, not static assets
   async headers() {
     return [
       {
-        source: '/(.*)',
+        source: '/((?!_next|favicon).*)',
         headers: [
           {
             key: 'Cache-Control',
