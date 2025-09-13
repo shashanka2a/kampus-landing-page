@@ -11,6 +11,9 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "Kampus Landing Page",
   description: "A modern landing page built with Next.js and Tailwind CSS",
+  icons: {
+    icon: '/favicon.svg',
+  },
 };
 
 export default function RootLayout({
