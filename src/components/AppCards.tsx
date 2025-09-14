@@ -102,7 +102,7 @@ export function AppCards() {
   ];
 
   return (
-    <section className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 bg-gradient-to-br from-gray-50 via-blue-50/30 to-orange-50/30" id="apps">
+    <section className="py-20 sm:py-24 md:py-32 px-4 sm:px-6 bg-gradient-to-br from-gray-50 via-blue-50/30 to-orange-50/30" id="apps">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <motion.div 

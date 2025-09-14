@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 
 export function Hero() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-orange-50 pt-20">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-orange-50 pt-16 sm:pt-20">
       <div className="max-w-5xl mx-auto px-6 text-center">
         {/* Logo/Brand */}
         <motion.div 
@@ -32,7 +32,7 @@ export function Hero() {
 
         {/* Subtext with emojis */}
         <motion.p 
-          className="text-lg sm:text-xl md:text-2xl mb-12 md:mb-16 max-w-3xl mx-auto text-gray-600 font-medium px-4"
+          className="text-lg sm:text-xl md:text-2xl mb-10 sm:mb-12 md:mb-14 max-w-3xl mx-auto text-gray-600 font-medium px-4"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
@@ -48,7 +48,7 @@ export function Hero() {
         >
           <Button 
             size="lg" 
-            className="text-lg sm:text-xl px-8 sm:px-12 md:px-16 py-6 sm:py-7 md:py-8 rounded-full text-white border-none font-bold transform transition-all duration-300 hover:scale-110 hover:shadow-2xl gradient-uf-primary hover:gradient-uf-orange"
+            className="text-lg sm:text-xl px-8 sm:px-12 md:px-16 py-4 sm:py-5 md:py-6 rounded-full text-white border-none font-bold transform transition-all duration-300 hover:scale-105 hover:shadow-2xl gradient-uf-primary hover:gradient-uf-orange shadow-lg"
           >
             Get Started
           </Button>
@@ -56,7 +56,7 @@ export function Hero() {
 
         {/* Decorative floating elements */}
         <motion.div 
-          className="mt-12 md:mt-20 flex justify-center space-x-4 md:space-x-6"
+          className="mt-16 sm:mt-20 md:mt-24 flex justify-center space-x-4 md:space-x-6"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.8 }}
