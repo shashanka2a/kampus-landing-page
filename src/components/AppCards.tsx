@@ -22,10 +22,15 @@ function AppCard({ emoji, title, description, accentColor, gradient, url, index 
       transition={{ duration: 0.6, delay: index * 0.1 }}
       viewport={{ once: true }}
     >
-      <Card 
-        className="group cursor-pointer transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:-translate-y-4 bg-white rounded-3xl border-0 shadow-lg overflow-hidden"
-        onClick={() => window.open(url, '_blank', 'noopener,noreferrer')}
+      <a 
+        href={url} 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="block focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 rounded-3xl"
       >
+        <Card 
+          className="group cursor-pointer transition-all duration-500 hover:scale-110 hover:shadow-2xl hover:-translate-y-4 bg-white rounded-3xl border-0 shadow-lg overflow-hidden"
+        >
         <CardContent className="p-6 sm:p-8 md:p-10 text-center relative">
           {/* Background gradient on hover */}
           <div className={`absolute inset-0 opacity-0 group-hover:opacity-5 transition-opacity duration-500 ${gradient}`}></div>
@@ -47,20 +52,17 @@ function AppCard({ emoji, title, description, accentColor, gradient, url, index 
 
           {/* Explore Button */}
           <Button 
-            className="rounded-full px-6 sm:px-8 md:px-10 py-2 sm:py-3 transition-all duration-300 hover:shadow-xl hover:scale-105 border-none font-bold transform text-sm sm:text-base"
+            className="rounded-full px-6 sm:px-8 md:px-10 py-2 sm:py-3 transition-all duration-300 hover:shadow-xl hover:scale-105 border-none font-bold transform text-sm sm:text-base pointer-events-none"
             style={{ 
               backgroundColor: accentColor, 
               color: 'white'
-            }}
-            onClick={(e) => {
-              e.stopPropagation();
-              window.open(url, '_blank', 'noopener,noreferrer');
             }}
           >
             Explore
           </Button>
         </CardContent>
       </Card>
+      </a>
     </motion.div>
   );
 }
