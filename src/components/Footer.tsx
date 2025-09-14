@@ -1,4 +1,4 @@
-import { Instagram, Twitter, Facebook, Mail, Heart } from "lucide-react";
+import { Instagram, Mail, Heart } from "lucide-react";
 
 export function Footer() {
   return (
@@ -19,30 +19,20 @@ export function Footer() {
             </p>
             
             {/* Social Links */}
-            <div className="flex space-x-3 sm:space-x-4">
+            <div className="flex justify-center sm:justify-start space-x-4 sm:space-x-6">
               <a 
-                href="#" 
-                className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/10 hover:bg-orange-500 flex items-center justify-center transition-all duration-300 hover:scale-110"
+                href="https://instagram.com/kampus.fun" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/10 hover:bg-orange-500 flex items-center justify-center transition-all duration-300 hover:scale-110"
               >
-                <Instagram size={16} className="sm:w-[18px] sm:h-[18px]" />
+                <Instagram size={18} className="sm:w-[20px] sm:h-[20px]" />
               </a>
               <a 
-                href="#" 
-                className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/10 hover:bg-blue-500 flex items-center justify-center transition-all duration-300 hover:scale-110"
+                href="mailto:kampus.fun@gmail.com"
+                className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/10 hover:bg-green-500 flex items-center justify-center transition-all duration-300 hover:scale-110"
               >
-                <Twitter size={16} className="sm:w-[18px] sm:h-[18px]" />
-              </a>
-              <a 
-                href="#" 
-                className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/10 hover:bg-blue-600 flex items-center justify-center transition-all duration-300 hover:scale-110"
-              >
-                <Facebook size={16} className="sm:w-[18px] sm:h-[18px]" />
-              </a>
-              <a 
-                href="#" 
-                className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/10 hover:bg-green-500 flex items-center justify-center transition-all duration-300 hover:scale-110"
-              >
-                <Mail size={16} className="sm:w-[18px] sm:h-[18px]" />
+                <Mail size={18} className="sm:w-[20px] sm:h-[20px]" />
               </a>
             </div>
           </div>
@@ -63,8 +53,8 @@ export function Footer() {
             <h4 className="font-semibold mb-3 sm:mb-4 text-base sm:text-lg">Get in Touch</h4>
             <ul className="space-y-2 sm:space-y-3">
               <li>
-                <a href="mailto:hello@kampus.fun" className="text-gray-300 hover:text-orange-400 transition-colors text-sm sm:text-base">
-                  hello@kampus.fun
+                <a href="mailto:kampus.fun@gmail.com" className="text-gray-300 hover:text-orange-400 transition-colors text-sm sm:text-base">
+                  kampus.fun@gmail.com
                 </a>
               </li>
               <li className="text-gray-300 text-sm sm:text-base">University of Florida</li>
