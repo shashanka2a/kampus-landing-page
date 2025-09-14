@@ -35,7 +35,7 @@ export function Navigation() {
           {/* Desktop CTA Button */}
           <div className="hidden md:block">
             <Button 
-              className="rounded-full px-5 py-2.5 lg:px-6 lg:py-3 bg-orange-500 hover:bg-orange-600 text-white border-none transition-all duration-300 hover:shadow-lg hover:scale-105 font-semibold text-sm lg:text-base"
+              className="rounded-full px-6 py-3 lg:px-8 lg:py-4 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white border-none transition-all duration-300 hover:shadow-lg hover:scale-105 font-semibold text-sm lg:text-base shadow-md"
               onClick={() => {
                 const contactSection = document.getElementById('contact');
                 if (contactSection) {
@@ -82,7 +82,7 @@ export function Navigation() {
                 Contact
               </a>
               <Button 
-                className="rounded-full px-6 py-2.5 bg-orange-500 hover:bg-orange-600 text-white border-none transition-all duration-300 hover:shadow-lg hover:scale-105 w-fit font-semibold"
+                className="rounded-full px-8 py-3 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white border-none transition-all duration-300 hover:shadow-lg hover:scale-105 w-fit font-semibold shadow-md"
                 onClick={() => {
                   setIsMenuOpen(false);
                   const contactSection = document.getElementById('contact');
