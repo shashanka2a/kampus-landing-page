@@ -27,28 +27,90 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
         >
-          All-in-one campus hub
+          Your Ultimate Campus Life Platform
         </motion.h2>
 
         {/* Subtext with emojis */}
         <motion.p 
-          className="text-lg sm:text-xl md:text-2xl mb-10 sm:mb-12 md:mb-14 max-w-3xl mx-auto text-gray-600 font-medium px-4"
+          className="text-lg sm:text-xl md:text-2xl mb-8 sm:mb-10 max-w-4xl mx-auto text-gray-600 font-medium px-4"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
         >
-          Your campus life simplified. Shop 🛒 • Ride 🚗 • Live 🏡 • Party 🎉
+          Connect, buy, sell, ride, and discover everything campus has to offer — all in one place.
         </motion.p>
 
-        {/* CTA Button */}
+        {/* Visual Feature Icons */}
+        <motion.div
+          className="flex justify-center items-center space-x-8 sm:space-x-12 mb-10 sm:mb-12 md:mb-14"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
+        >
+          <motion.div 
+            className="text-center group cursor-pointer"
+            whileHover={{ y: -5, scale: 1.1 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
+            <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center mb-2 mx-auto shadow-lg group-hover:shadow-xl transition-shadow">
+              <span className="text-2xl sm:text-3xl">🛒</span>
+            </div>
+            <p className="text-sm font-semibold text-gray-700">Shop</p>
+          </motion.div>
+          <motion.div 
+            className="text-center group cursor-pointer"
+            whileHover={{ y: -5, scale: 1.1 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
+            <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center mb-2 mx-auto shadow-lg group-hover:shadow-xl transition-shadow">
+              <span className="text-2xl sm:text-3xl">🚗</span>
+            </div>
+            <p className="text-sm font-semibold text-gray-700">Ride</p>
+          </motion.div>
+          <motion.div 
+            className="text-center group cursor-pointer"
+            whileHover={{ y: -5, scale: 1.1 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
+            <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center mb-2 mx-auto shadow-lg group-hover:shadow-xl transition-shadow">
+              <span className="text-2xl sm:text-3xl">🏡</span>
+            </div>
+            <p className="text-sm font-semibold text-gray-700">Live</p>
+          </motion.div>
+          <motion.div 
+            className="text-center group cursor-pointer"
+            whileHover={{ y: -5, scale: 1.1 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
+            <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center mb-2 mx-auto shadow-lg group-hover:shadow-xl transition-shadow">
+              <span className="text-2xl sm:text-3xl">🎉</span>
+            </div>
+            <p className="text-sm font-semibold text-gray-700">Party</p>
+          </motion.div>
+        </motion.div>
+
+        {/* Supporting Context */}
+        <motion.p
+          className="text-base sm:text-lg text-gray-500 mb-8 max-w-2xl mx-auto font-medium"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
+        >
+          Join thousands of students already using our platform. Explore our apps below ↓
+        </motion.p>
+
+        {/* Enhanced CTA Button */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+          transition={{ duration: 0.8, delay: 0.7, ease: "easeOut" }}
+          className="relative"
         >
+          {/* Glow effect */}
+          <div className="absolute inset-0 rounded-full bg-gradient-to-r from-orange-400 to-blue-600 opacity-30 blur-xl scale-110"></div>
           <Button 
             size="lg" 
-            className="text-lg sm:text-xl px-8 sm:px-12 md:px-16 py-4 sm:py-5 md:py-6 rounded-full text-white border-none font-bold transform transition-all duration-300 hover:scale-105 hover:shadow-2xl gradient-uf-primary hover:gradient-uf-orange shadow-lg"
+            className="relative text-xl sm:text-2xl px-12 sm:px-16 md:px-20 py-6 sm:py-7 md:py-8 rounded-full text-white border-none font-black transform transition-all duration-300 hover:scale-110 hover:shadow-2xl bg-gradient-to-r from-orange-500 to-blue-700 hover:from-orange-600 hover:to-blue-800 shadow-2xl"
             onClick={() => {
               const appsSection = document.getElementById('apps');
               if (appsSection) {
@@ -56,7 +118,12 @@ export function Hero() {
               }
             }}
           >
-            Get Started
+            <motion.span
+              animate={{ scale: [1, 1.05, 1] }}
+              transition={{ duration: 2, repeat: Infinity }}
+            >
+              Explore Our Apps
+            </motion.span>
           </Button>
         </motion.div>
 
