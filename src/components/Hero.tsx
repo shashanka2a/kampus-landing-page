@@ -49,6 +49,12 @@ export function Hero() {
           <Button 
             size="lg" 
             className="text-lg sm:text-xl px-8 sm:px-12 md:px-16 py-4 sm:py-5 md:py-6 rounded-full text-white border-none font-bold transform transition-all duration-300 hover:scale-105 hover:shadow-2xl gradient-uf-primary hover:gradient-uf-orange shadow-lg"
+            onClick={() => {
+              const appsSection = document.getElementById('apps');
+              if (appsSection) {
+                appsSection.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
           >
             Get Started
           </Button>

@@ -2,7 +2,7 @@ import { Instagram, Twitter, Facebook, Mail, Heart } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white mt-16 sm:mt-20 md:mt-24">
+    <footer className="bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white mt-16 sm:mt-20 md:mt-24 scroll-mt-24" id="contact">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 md:py-24">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 md:gap-16">
           {/* Brand Section */}
@@ -62,7 +62,11 @@ export function Footer() {
           <div>
             <h4 className="font-semibold mb-3 sm:mb-4 text-base sm:text-lg">Get in Touch</h4>
             <ul className="space-y-2 sm:space-y-3">
-              <li className="text-gray-300 text-sm sm:text-base">hellokampus.fun</li>
+              <li>
+                <a href="mailto:hello@kampus.fun" className="text-gray-300 hover:text-orange-400 transition-colors text-sm sm:text-base">
+                  hello@kampus.fun
+                </a>
+              </li>
               <li className="text-gray-300 text-sm sm:text-base">University of Florida</li>
               <li className="text-gray-300 text-sm sm:text-base">Gainesville, FL</li>
             </ul>

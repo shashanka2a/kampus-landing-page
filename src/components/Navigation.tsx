@@ -34,7 +34,15 @@ export function Navigation() {
 
           {/* Desktop CTA Button */}
           <div className="hidden md:block">
-            <Button className="rounded-full px-5 py-2.5 lg:px-6 lg:py-3 bg-orange-500 hover:bg-orange-600 text-white border-none transition-all duration-300 hover:shadow-lg hover:scale-105 font-semibold text-sm lg:text-base">
+            <Button 
+              className="rounded-full px-5 py-2.5 lg:px-6 lg:py-3 bg-orange-500 hover:bg-orange-600 text-white border-none transition-all duration-300 hover:shadow-lg hover:scale-105 font-semibold text-sm lg:text-base"
+              onClick={() => {
+                const contactSection = document.getElementById('contact');
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            >
               Sign Up
             </Button>
           </div>
@@ -73,7 +81,16 @@ export function Navigation() {
               >
                 Contact
               </a>
-              <Button className="rounded-full px-6 py-2.5 bg-orange-500 hover:bg-orange-600 text-white border-none transition-all duration-300 hover:shadow-lg hover:scale-105 w-fit font-semibold">
+              <Button 
+                className="rounded-full px-6 py-2.5 bg-orange-500 hover:bg-orange-600 text-white border-none transition-all duration-300 hover:shadow-lg hover:scale-105 w-fit font-semibold"
+                onClick={() => {
+                  setIsMenuOpen(false);
+                  const contactSection = document.getElementById('contact');
+                  if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+              >
                 Sign Up
               </Button>
             </div>
