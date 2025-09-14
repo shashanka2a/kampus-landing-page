@@ -89,15 +89,33 @@ export function Hero() {
           </motion.div>
         </motion.div>
 
-        {/* Supporting Context */}
-        <motion.p
-          className="text-base sm:text-lg text-gray-500 mb-8 max-w-2xl mx-auto font-medium"
+        {/* Social Proof & Context */}
+        <motion.div
+          className="mb-8 max-w-3xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
         >
-          Join thousands of students already using our platform. Explore our apps below ↓
-        </motion.p>
+          <div className="flex items-center justify-center space-x-6 mb-4">
+            <div className="text-center">
+              <div className="text-2xl sm:text-3xl font-black text-orange-600">15,000+</div>
+              <div className="text-sm text-gray-500">Active Students</div>
+            </div>
+            <div className="w-px h-12 bg-gray-300"></div>
+            <div className="text-center">
+              <div className="text-2xl sm:text-3xl font-black text-blue-600">4.8★</div>
+              <div className="text-sm text-gray-500">App Rating</div>
+            </div>
+            <div className="w-px h-12 bg-gray-300"></div>
+            <div className="text-center">
+              <div className="text-2xl sm:text-3xl font-black text-orange-600">50+</div>
+              <div className="text-sm text-gray-500">Universities</div>
+            </div>
+          </div>
+          <p className="text-base sm:text-lg text-gray-500 font-medium text-center">
+            Join thousands of students already using our platform. Explore our apps below ↓
+          </p>
+        </motion.div>
 
         {/* Enhanced CTA Button */}
         <motion.div
@@ -108,23 +126,38 @@ export function Hero() {
         >
           {/* Glow effect */}
           <div className="absolute inset-0 rounded-full bg-gradient-to-r from-orange-400 to-blue-600 opacity-30 blur-xl scale-110"></div>
-          <Button 
-            size="lg" 
-            className="relative text-xl sm:text-2xl px-12 sm:px-16 md:px-20 py-6 sm:py-7 md:py-8 rounded-full text-white border-none font-black transform transition-all duration-300 hover:scale-110 hover:shadow-2xl bg-gradient-to-r from-orange-500 to-blue-700 hover:from-orange-600 hover:to-blue-800 shadow-2xl"
-            onClick={() => {
-              const appsSection = document.getElementById('apps');
-              if (appsSection) {
-                appsSection.scrollIntoView({ behavior: 'smooth' });
-              }
-            }}
-          >
-            <motion.span
-              animate={{ scale: [1, 1.05, 1] }}
-              transition={{ duration: 2, repeat: Infinity }}
+          <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
+            <Button 
+              size="lg" 
+              className="relative text-xl sm:text-2xl px-12 sm:px-16 py-6 sm:py-7 rounded-full text-white border-none font-black transform transition-all duration-300 hover:scale-110 hover:shadow-2xl bg-gradient-to-r from-orange-500 to-blue-700 hover:from-orange-600 hover:to-blue-800 shadow-2xl order-1 sm:order-1"
+              onClick={() => {
+                const appsSection = document.getElementById('apps');
+                if (appsSection) {
+                  appsSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
             >
-              Explore Our Apps
-            </motion.span>
-          </Button>
+              <motion.span
+                animate={{ scale: [1, 1.05, 1] }}
+                transition={{ duration: 2, repeat: Infinity }}
+              >
+                Explore Our Apps
+              </motion.span>
+            </Button>
+            <Button 
+              variant="outline"
+              size="lg" 
+              className="text-lg sm:text-xl px-8 sm:px-12 py-6 sm:py-7 rounded-full border-2 border-orange-500 text-orange-600 hover:bg-orange-50 font-bold transition-all duration-300 hover:scale-105 order-2 sm:order-2 bg-white/80 backdrop-blur-sm"
+              onClick={() => {
+                const contactSection = document.getElementById('contact');
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            >
+              Get Started Free
+            </Button>
+          </div>
         </motion.div>
 
         {/* Decorative floating elements */}
