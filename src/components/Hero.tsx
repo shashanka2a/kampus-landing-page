@@ -5,8 +5,15 @@ import { motion } from "motion/react";
 
 export function Hero() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-orange-50 pt-16 sm:pt-20">
-      <div className="max-w-5xl mx-auto px-6 text-center">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-orange-50 pt-16 sm:pt-20 relative overflow-hidden">
+      {/* Background Graphics */}
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute top-20 left-10 w-20 h-20 rounded-full bg-gradient-to-br from-orange-200 to-orange-300 blur-xl"></div>
+        <div className="absolute top-32 right-16 w-16 h-16 rounded-full bg-gradient-to-br from-blue-200 to-blue-300 blur-lg"></div>
+        <div className="absolute bottom-40 left-1/4 w-12 h-12 rounded-full bg-gradient-to-br from-purple-200 to-purple-300 blur-lg"></div>
+        <div className="absolute bottom-60 right-1/3 w-24 h-24 rounded-full bg-gradient-to-br from-orange-100 to-orange-200 blur-2xl"></div>
+      </div>
+      <div className="max-w-5xl mx-auto px-6 text-center relative z-10">
         {/* Logo/Brand */}
         <motion.div 
           className="mb-8 md:mb-12"
@@ -91,28 +98,37 @@ export function Hero() {
 
         {/* Social Proof & Context */}
         <motion.div
-          className="mb-8 max-w-3xl mx-auto"
+          className="mb-10 max-w-4xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
         >
-          <div className="flex items-center justify-center space-x-6 mb-4">
-            <div className="text-center">
-              <div className="text-2xl sm:text-3xl font-black text-orange-600">15,000+</div>
-              <div className="text-sm text-gray-500">Active Students</div>
-            </div>
-            <div className="w-px h-12 bg-gray-300"></div>
-            <div className="text-center">
-              <div className="text-2xl sm:text-3xl font-black text-blue-600">4.8★</div>
-              <div className="text-sm text-gray-500">App Rating</div>
-            </div>
-            <div className="w-px h-12 bg-gray-300"></div>
-            <div className="text-center">
-              <div className="text-2xl sm:text-3xl font-black text-orange-600">50+</div>
-              <div className="text-sm text-gray-500">Universities</div>
+          <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-white/20 mb-6">
+            <div className="grid grid-cols-3 gap-6 sm:gap-8">
+              <div className="text-center">
+                <div className="w-12 h-12 mx-auto mb-2 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center">
+                  <span className="text-white font-bold text-lg">👥</span>
+                </div>
+                <div className="text-2xl sm:text-3xl font-black text-orange-600">15,000+</div>
+                <div className="text-sm text-gray-600 font-medium">Active Students</div>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 mx-auto mb-2 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center">
+                  <span className="text-white font-bold text-lg">⭐</span>
+                </div>
+                <div className="text-2xl sm:text-3xl font-black text-blue-600">4.8★</div>
+                <div className="text-sm text-gray-600 font-medium">App Rating</div>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 mx-auto mb-2 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center">
+                  <span className="text-white font-bold text-lg">🏫</span>
+                </div>
+                <div className="text-2xl sm:text-3xl font-black text-orange-600">50+</div>
+                <div className="text-sm text-gray-600 font-medium">Universities</div>
+              </div>
             </div>
           </div>
-          <p className="text-base sm:text-lg text-gray-500 font-medium text-center">
+          <p className="text-base sm:text-lg text-gray-600 font-medium text-center">
             Join thousands of students already using our platform. Explore our apps below ↓
           </p>
         </motion.div>
@@ -129,25 +145,7 @@ export function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
             <Button 
               size="lg" 
-              className="relative text-xl sm:text-2xl px-12 sm:px-16 py-6 sm:py-7 rounded-full text-white border-none font-black transform transition-all duration-300 hover:scale-110 hover:shadow-2xl bg-gradient-to-r from-orange-500 to-blue-700 hover:from-orange-600 hover:to-blue-800 shadow-2xl order-1 sm:order-1"
-              onClick={() => {
-                const appsSection = document.getElementById('apps');
-                if (appsSection) {
-                  appsSection.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
-            >
-              <motion.span
-                animate={{ scale: [1, 1.05, 1] }}
-                transition={{ duration: 2, repeat: Infinity }}
-              >
-                Explore Our Apps
-              </motion.span>
-            </Button>
-            <Button 
-              variant="outline"
-              size="lg" 
-              className="text-lg sm:text-xl px-8 sm:px-12 py-6 sm:py-7 rounded-full border-2 border-orange-500 text-orange-600 hover:bg-orange-50 font-bold transition-all duration-300 hover:scale-105 order-2 sm:order-2 bg-white/80 backdrop-blur-sm"
+              className="relative text-xl sm:text-2xl px-12 sm:px-16 py-6 sm:py-7 rounded-full text-white border-none font-black transform transition-all duration-300 hover:scale-110 hover:shadow-2xl bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 shadow-2xl order-1 sm:order-1"
               onClick={() => {
                 const contactSection = document.getElementById('contact');
                 if (contactSection) {
@@ -155,7 +153,25 @@ export function Hero() {
                 }
               }}
             >
-              Get Started Free
+              <motion.span
+                animate={{ scale: [1, 1.05, 1] }}
+                transition={{ duration: 2, repeat: Infinity }}
+              >
+                Get Started Free
+              </motion.span>
+            </Button>
+            <Button 
+              variant="outline"
+              size="lg" 
+              className="text-lg sm:text-xl px-10 sm:px-14 py-6 sm:py-7 rounded-full font-bold transition-all duration-300 hover:scale-105 order-2 sm:order-2 border-2 border-orange-500 text-orange-600 hover:bg-orange-50 bg-white/80 backdrop-blur-sm"
+              onClick={() => {
+                const appsSection = document.getElementById('apps');
+                if (appsSection) {
+                  appsSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            >
+              Explore Our Apps
             </Button>
           </div>
         </motion.div>

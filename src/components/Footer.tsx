@@ -51,14 +51,28 @@ export function Footer() {
           {/* Contact */}
           <div>
             <h4 className="font-semibold mb-3 sm:mb-4 text-base sm:text-lg">Get in Touch</h4>
-            <ul className="space-y-2 sm:space-y-3">
+            <ul className="space-y-3 sm:space-y-4">
               <li>
-                <a href="mailto:kampus.fun@gmail.com" className="text-gray-300 hover:text-orange-400 transition-colors text-sm sm:text-base">
-                  kampus.fun@gmail.com
+                <a 
+                  href="mailto:kampus.fun@gmail.com"
+                  className="inline-flex items-center space-x-3 group"
+                >
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/10 hover:bg-green-500 flex items-center justify-center transition-all duration-300 hover:scale-110">
+                    <Mail size={18} className="sm:w-[20px] sm:h-[20px] text-gray-300 group-hover:text-white" />
+                  </div>
+                  <span className="text-gray-300 hover:text-orange-400 transition-colors text-sm sm:text-base">
+                    kampus.fun@gmail.com
+                  </span>
                 </a>
               </li>
-              <li className="text-gray-300 text-sm sm:text-base">University of Florida</li>
-              <li className="text-gray-300 text-sm sm:text-base">Gainesville, FL</li>
+              <li className="text-gray-300 text-sm sm:text-base flex items-center space-x-3">
+                <div className="w-4 h-4 rounded-full bg-orange-500"></div>
+                <span>University of Florida</span>
+              </li>
+              <li className="text-gray-300 text-sm sm:text-base flex items-center space-x-3">
+                <div className="w-4 h-4 rounded-full bg-blue-500"></div>
+                <span>Gainesville, FL</span>
+              </li>
             </ul>
           </div>
         </div>
