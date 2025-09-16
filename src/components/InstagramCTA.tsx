@@ -22,33 +22,33 @@ export function InstagramCTA() {
           exit={{ y: 100, opacity: 0 }}
           transition={{ duration: 0.3, ease: "easeOut" }}
         >
-        <div className="bg-gradient-to-r from-orange-500 to-blue-600 rounded-2xl p-4 shadow-2xl border-2 border-white/50 backdrop-blur-sm max-w-sm w-full mx-auto pointer-events-auto relative overflow-hidden ring-2 ring-black/10">
+        <div className="bg-white rounded-2xl p-4 shadow-2xl border-2 border-gray-300 backdrop-blur-sm max-w-sm w-full mx-auto pointer-events-auto relative overflow-hidden">
           {/* Background Pattern */}
-          <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-white"></div>
           
           {/* Close Button */}
           <button 
             onClick={() => setIsVisible(false)}
-            className="absolute top-2 right-2 w-6 h-6 rounded-full bg-white/20 hover:bg-white/30 flex items-center justify-center transition-colors duration-200"
+            className="absolute top-2 right-2 w-6 h-6 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-colors duration-200"
           >
-            <X size={12} className="text-white" />
+            <X size={12} className="text-gray-600" />
           </button>
 
           <div className="relative z-10 flex items-center space-x-3">
             {/* Instagram Icon */}
-            <div className="w-12 h-12 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center">
-              <Instagram size={20} className="text-white" />
+            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-500 via-pink-500 to-orange-500 flex items-center justify-center shadow-xl border-2 border-white">
+              <Instagram size={24} className="text-white font-bold" strokeWidth={2.5} />
             </div>
             
             {/* Content */}
             <div className="flex-1">
-              <p className="text-white font-semibold text-sm mb-1 drop-shadow-lg">Follow us on Instagram!</p>
-              <p className="text-white/95 text-xs font-medium drop-shadow-md">@kampus.fun</p>
+              <p className="text-black font-bold text-base mb-1">Follow us on Instagram!</p>
+              <p className="text-gray-700 text-sm font-bold">@kampus.fun</p>
             </div>
             
             {/* CTA Button */}
             <Button 
-              className="rounded-full px-4 py-2 bg-white hover:bg-gray-100 text-orange-600 font-bold text-sm transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-xl"
+              className="rounded-full px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold text-sm transition-all duration-200 hover:scale-105 shadow-xl hover:shadow-2xl border-2 border-white"
               onClick={() => {
                 window.open('https://instagram.com/kampus.fun', '_blank', 'noopener,noreferrer');
               }}
