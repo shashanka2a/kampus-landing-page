@@ -43,14 +43,14 @@ function AppCard({ emoji, title, description, accentColor, gradient, url, index 
           </motion.div>
 
           {/* Title */}
-          <h3 className="mb-2 text-white font-bold text-lg drop-shadow-sm">{title}</h3>
+          <h3 className="type-h3 mb-2 text-white drop-shadow-sm">{title}</h3>
 
           {/* Description */}
-          <p className="text-white mb-4 font-semibold text-sm leading-relaxed drop-shadow-sm">{description}</p>
+          <p className="type-body-sm text-white/90 mb-4 leading-relaxed drop-shadow-sm">{description}</p>
           
           {/* Explore Button - Clean Style */}
           <Button 
-            className="rounded-full px-6 py-2 bg-white hover:bg-gray-50 font-bold text-sm transition-all duration-300 hover:shadow-lg hover:scale-105 pointer-events-none border-2 group-hover:shadow-xl"
+            className="rounded-full px-6 py-2 bg-white hover:bg-gray-50 font-semibold text-sm transition-all duration-300 hover:shadow-lg hover:scale-105 pointer-events-none border-2 group-hover:shadow-xl"
             style={{ 
               color: accentColor,
               borderColor: accentColor
@@ -113,7 +113,7 @@ export function AppCards() {
           viewport={{ once: true }}
         >
           <motion.h2 
-            className="text-4xl sm:text-5xl md:text-6xl font-black mb-6 sm:mb-8 gradient-uf-text"
+            className="type-h1 mb-6 sm:mb-8 text-gray-800"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -122,7 +122,7 @@ export function AppCards() {
             Everything You Need
           </motion.h2>
           <motion.p 
-            className="text-xl sm:text-2xl text-gray-600 max-w-4xl mx-auto font-medium px-4 leading-relaxed"
+            className="type-body-lg text-gray-600 max-w-4xl mx-auto px-4 leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
@@ -154,8 +154,8 @@ export function AppCards() {
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-3">Ready to Simplify Your Campus Life?</h3>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto font-medium">
+            <h3 className="type-h2 text-gray-800 mb-3">Ready to Simplify Your Campus Life?</h3>
+            <p className="type-body-lg text-gray-600 max-w-2xl mx-auto">
               Get started with our student-focused platform today
             </p>
           </motion.div>
@@ -167,7 +167,7 @@ export function AppCards() {
           >
             <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
               <Button 
-                className="rounded-full px-8 sm:px-12 py-4 sm:py-5 text-lg sm:text-xl font-bold text-white bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                className="rounded-full px-8 sm:px-12 py-4 sm:py-5 text-lg sm:text-xl font-semibold text-white bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 transition-all duration-300 hover:scale-105 hover:shadow-xl"
                 onClick={() => {
                   const contactSection = document.getElementById('contact');
                   if (contactSection) {
@@ -177,7 +177,7 @@ export function AppCards() {
               >
                 Get Started Today
               </Button>
-              <p className="text-sm text-gray-500 sm:ml-4">Free to start • No credit card required</p>
+              <p className="type-caption sm:ml-4">Free to start • No credit card required</p>
             </div>
           </motion.div>
         </motion.div>

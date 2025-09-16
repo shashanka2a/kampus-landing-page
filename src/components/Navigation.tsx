@@ -16,7 +16,7 @@ export function Navigation() {
             <div className="w-8 h-8 rounded-xl gradient-uf-primary flex items-center justify-center">
               <span className="text-white font-bold">K</span>
             </div>
-            <span className="text-lg sm:text-xl font-bold gradient-uf-text">Kampus.fun</span>
+            <span className="type-h3 gradient-uf-text">Kampus.fun</span>
           </div>
         </div>
 
