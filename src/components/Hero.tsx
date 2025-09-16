@@ -21,7 +21,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <h1 className="type-display mb-4 gradient-uf-text">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-4 gradient-uf-text">
             Kampus.fun
           </h1>
           <div className="w-20 sm:w-24 md:w-32 h-2 mx-auto rounded-full gradient-uf-primary"></div>
@@ -29,7 +29,7 @@ export function Hero() {
 
         {/* Main Tagline */}
         <motion.h2 
-          className="type-h1 mb-6 md:mb-8 text-gray-800"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-6 md:mb-8 leading-tight text-gray-800"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
@@ -39,7 +39,7 @@ export function Hero() {
 
         {/* Subtext with emojis */}
         <motion.p 
-          className="type-body-lg mb-8 sm:mb-10 max-w-4xl mx-auto text-gray-600 px-4"
+          className="text-lg sm:text-xl md:text-2xl mb-8 sm:mb-10 max-w-4xl mx-auto text-gray-600 font-medium px-4"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
@@ -62,7 +62,7 @@ export function Hero() {
             <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center mb-2 mx-auto shadow-lg group-hover:shadow-xl transition-shadow">
               <span className="text-2xl sm:text-3xl">🛒</span>
             </div>
-            <p className="type-body-sm font-semibold text-gray-700">Shop</p>
+            <p className="text-sm font-semibold text-gray-700">Shop</p>
           </motion.div>
           <motion.div 
             className="text-center group cursor-pointer"
@@ -72,7 +72,7 @@ export function Hero() {
             <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center mb-2 mx-auto shadow-lg group-hover:shadow-xl transition-shadow">
               <span className="text-2xl sm:text-3xl">🚗</span>
             </div>
-            <p className="type-body-sm font-semibold text-gray-700">Ride</p>
+            <p className="text-sm font-semibold text-gray-700">Ride</p>
           </motion.div>
           <motion.div 
             className="text-center group cursor-pointer"
@@ -82,7 +82,7 @@ export function Hero() {
             <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center mb-2 mx-auto shadow-lg group-hover:shadow-xl transition-shadow">
               <span className="text-2xl sm:text-3xl">🏡</span>
             </div>
-            <p className="type-body-sm font-semibold text-gray-700">Live</p>
+            <p className="text-sm font-semibold text-gray-700">Live</p>
           </motion.div>
           <motion.div 
             className="text-center group cursor-pointer"
@@ -92,7 +92,7 @@ export function Hero() {
             <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center mb-2 mx-auto shadow-lg group-hover:shadow-xl transition-shadow">
               <span className="text-2xl sm:text-3xl">🎉</span>
             </div>
-            <p className="type-body-sm font-semibold text-gray-700">Party</p>
+            <p className="text-sm font-semibold text-gray-700">Party</p>
           </motion.div>
         </motion.div>
 
@@ -103,7 +103,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
         >
-          <p className="type-body text-gray-600 text-center">
+          <p className="text-base sm:text-lg text-gray-600 font-medium text-center">
             Discover what campus life has to offer. Explore our apps below ↓
           </p>
         </motion.div>
@@ -120,7 +120,7 @@ export function Hero() {
           <div className="flex justify-center">
             <Button 
               size="lg" 
-              className="relative text-lg sm:text-xl px-12 sm:px-16 py-6 sm:py-7 rounded-full bg-gradient-to-r from-orange-500 to-blue-600 hover:from-orange-600 hover:to-blue-700 text-white font-semibold transform transition-all duration-300 hover:scale-110 hover:shadow-2xl shadow-2xl"
+              className="relative text-xl sm:text-2xl px-12 sm:px-16 py-6 sm:py-7 rounded-full bg-gradient-to-r from-orange-500 to-blue-600 hover:from-orange-600 hover:to-blue-700 text-white font-black transform transition-all duration-300 hover:scale-110 hover:shadow-2xl shadow-2xl"
               onClick={() => {
                 const appsSection = document.getElementById('apps');
                 if (appsSection) {

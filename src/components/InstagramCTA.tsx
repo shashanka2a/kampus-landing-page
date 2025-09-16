@@ -42,13 +42,13 @@ export function InstagramCTA() {
             
             {/* Content */}
             <div className="flex-1">
-              <p className="type-body font-semibold text-black mb-1">Follow us on Instagram!</p>
-              <p className="type-body-sm text-gray-700">@kampus.fun</p>
+              <p className="text-black font-bold text-base mb-1">Follow us on Instagram!</p>
+              <p className="text-gray-700 text-sm font-bold">@kampus.fun</p>
             </div>
             
             {/* CTA Button */}
             <Button 
-              className="rounded-full px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold text-sm transition-all duration-200 hover:scale-105 shadow-xl hover:shadow-2xl border-2 border-white"
+              className="rounded-full px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold text-sm transition-all duration-200 hover:scale-105 shadow-xl hover:shadow-2xl border-2 border-white"
               onClick={() => {
                 window.open('https://instagram.com/kampus.fun', '_blank', 'noopener,noreferrer');
               }}
