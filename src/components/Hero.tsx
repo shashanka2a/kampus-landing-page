@@ -117,14 +117,14 @@ export function Hero() {
         >
           {/* Glow effect */}
           <div className="absolute inset-0 rounded-full bg-gradient-to-r from-orange-400 to-blue-600 opacity-30 blur-xl scale-110"></div>
-          <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
+          <div className="flex justify-center">
             <Button 
               size="lg" 
-              className="relative text-xl sm:text-2xl px-12 sm:px-16 py-6 sm:py-7 rounded-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-black transform transition-all duration-300 hover:scale-110 hover:shadow-2xl shadow-2xl order-1 sm:order-1"
+              className="relative text-xl sm:text-2xl px-12 sm:px-16 py-6 sm:py-7 rounded-full bg-gradient-to-r from-orange-500 to-blue-600 hover:from-orange-600 hover:to-blue-700 text-white font-black transform transition-all duration-300 hover:scale-110 hover:shadow-2xl shadow-2xl"
               onClick={() => {
-                const contactSection = document.getElementById('contact');
-                if (contactSection) {
-                  contactSection.scrollIntoView({ behavior: 'smooth' });
+                const appsSection = document.getElementById('apps');
+                if (appsSection) {
+                  appsSection.scrollIntoView({ behavior: 'smooth' });
                 }
               }}
             >
@@ -133,21 +133,8 @@ export function Hero() {
                 transition={{ duration: 2, repeat: Infinity }}
                 className="text-white"
               >
-                Get Started Free
+                Explore Our Apps
               </motion.span>
-            </Button>
-            <Button 
-              variant="outline"
-              size="lg" 
-              className="text-lg sm:text-xl px-10 sm:px-14 py-6 sm:py-7 rounded-full font-bold transition-all duration-300 hover:scale-105 order-2 sm:order-2 border-2 border-orange-500 text-orange-600 hover:bg-orange-50 bg-white hover:text-orange-700"
-              onClick={() => {
-                const appsSection = document.getElementById('apps');
-                if (appsSection) {
-                  appsSection.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
-            >
-              Explore Our Apps
             </Button>
           </div>
         </motion.div>

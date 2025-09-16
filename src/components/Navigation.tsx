@@ -35,21 +35,6 @@ export function Navigation() {
             </a>
           </div>
 
-          {/* Desktop CTA Button */}
-          <div className="hidden md:block">
-            <Button 
-              className="rounded-full px-6 py-2.5 lg:px-8 lg:py-3 bg-orange-600 hover:bg-orange-700 text-white font-semibold text-sm lg:text-base shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 border-0 relative overflow-hidden group"
-              onClick={() => {
-                const contactSection = document.getElementById('contact');
-                if (contactSection) {
-                  contactSection.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
-            >
-              <span className="relative z-10">Get Started</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-orange-600 to-red-500 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
-            </Button>
-          </div>
 
           {/* Mobile Menu Button */}
           <button
@@ -85,19 +70,6 @@ export function Navigation() {
               >
                 Contact
               </a>
-              <Button 
-                className="rounded-full px-8 py-3 bg-orange-600 hover:bg-orange-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-200 w-fit focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 border-0 relative overflow-hidden group"
-                onClick={() => {
-                  setIsMenuOpen(false);
-                  const contactSection = document.getElementById('contact');
-                  if (contactSection) {
-                    contactSection.scrollIntoView({ behavior: 'smooth' });
-                  }
-                }}
-              >
-                <span className="relative z-10">Get Started</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-orange-600 to-red-500 opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
-              </Button>
             </div>
           </div>
         )}

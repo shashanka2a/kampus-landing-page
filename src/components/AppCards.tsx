@@ -29,29 +29,31 @@ function AppCard({ emoji, title, description, accentColor, gradient, url, index 
         className="block focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 rounded-3xl"
       >
         <Card 
-          className={`group cursor-pointer transition-all duration-300 hover:scale-[1.02] hover:shadow-xl rounded-2xl border-0 shadow-md overflow-hidden ${gradient}`}
+          className={`group cursor-pointer transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl hover:-translate-y-1 rounded-2xl border-0 shadow-md overflow-hidden ${gradient}`}
         >
         <CardContent className="p-6 text-center relative">
           
           {/* App Logo */}
           <motion.div 
-            className="w-16 h-16 rounded-2xl bg-white/30 backdrop-blur-sm flex items-center justify-center mb-4 mx-auto transition-all duration-300 group-hover:scale-105 shadow-sm"
-            whileHover={{ scale: 1.05 }}
+            className="w-16 h-16 rounded-2xl bg-white/30 backdrop-blur-sm flex items-center justify-center mb-4 mx-auto transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 shadow-sm"
+            whileHover={{ scale: 1.1, rotate: 6 }}
+            transition={{ type: "spring", stiffness: 300 }}
           >
-            <span className="text-2xl">{emoji}</span>
+            <span className="text-2xl group-hover:scale-110 transition-transform duration-300">{emoji}</span>
           </motion.div>
 
           {/* Title */}
-          <h3 className="mb-2 text-white font-bold text-lg">{title}</h3>
+          <h3 className="mb-2 text-white font-bold text-lg drop-shadow-sm">{title}</h3>
 
           {/* Description */}
-          <p className="text-white/90 mb-4 font-medium text-sm leading-relaxed">{description}</p>
+          <p className="text-white mb-4 font-semibold text-sm leading-relaxed drop-shadow-sm">{description}</p>
           
           {/* Explore Button - Clean Style */}
           <Button 
-            className="rounded-full px-6 py-2 bg-white/90 hover:bg-white text-gray-800 font-semibold text-sm transition-all duration-200 hover:shadow-md pointer-events-none"
+            className="rounded-full px-6 py-2 bg-white hover:bg-gray-50 font-bold text-sm transition-all duration-300 hover:shadow-lg hover:scale-105 pointer-events-none border-2 group-hover:shadow-xl"
             style={{ 
-              color: accentColor 
+              color: accentColor,
+              borderColor: accentColor
             }}
           >
             Explore App
@@ -139,7 +141,7 @@ export function AppCards() {
 
         {/* Call to Action after apps */}
         <motion.div
-          className="text-center mt-24 sm:mt-28 md:mt-32"
+          className="text-center mt-20 sm:mt-24 md:mt-32 mb-16 sm:mb-20 md:mb-24"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
