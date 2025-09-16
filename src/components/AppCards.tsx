@@ -29,55 +29,32 @@ function AppCard({ emoji, title, description, accentColor, gradient, url, index 
         className="block focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 rounded-3xl"
       >
         <Card 
-          className={`group cursor-pointer transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:-translate-y-2 rounded-3xl border-0 shadow-lg overflow-hidden ${gradient}`}
+          className={`group cursor-pointer transition-all duration-300 hover:scale-[1.02] hover:shadow-xl rounded-2xl border-0 shadow-md overflow-hidden ${gradient}`}
         >
-        <CardContent className="p-8 sm:p-10 md:p-12 text-center relative">
-          
-          {/* Popularity Badge */}
-          <div className="absolute top-6 right-6 bg-white/30 backdrop-blur-sm rounded-full px-3 py-1.5">
-            <span className="text-white text-xs font-semibold flex items-center">
-              ★ {index === 0 ? '4,200+' : index === 1 ? '3,800+' : index === 2 ? '5,100+' : '3,600+'}
-            </span>
-          </div>
+        <CardContent className="p-6 text-center relative">
           
           {/* App Logo */}
           <motion.div 
-            className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-3xl bg-white/25 backdrop-blur-sm flex items-center justify-center mb-6 sm:mb-8 mx-auto transition-all duration-500 group-hover:scale-110 shadow-lg"
-            whileHover={{ scale: 1.1 }}
+            className="w-16 h-16 rounded-2xl bg-white/30 backdrop-blur-sm flex items-center justify-center mb-4 mx-auto transition-all duration-300 group-hover:scale-105 shadow-sm"
+            whileHover={{ scale: 1.05 }}
           >
-            <span className="text-3xl sm:text-4xl md:text-5xl">{emoji}</span>
+            <span className="text-2xl">{emoji}</span>
           </motion.div>
 
           {/* Title */}
-          <h3 className="mb-3 sm:mb-4 text-white font-bold text-xl sm:text-2xl">{title}</h3>
+          <h3 className="mb-2 text-white font-bold text-lg">{title}</h3>
 
           {/* Description */}
-          <p className="text-white/90 mb-6 sm:mb-8 font-medium text-base sm:text-lg leading-relaxed">{description}</p>
+          <p className="text-white/90 mb-4 font-medium text-sm leading-relaxed">{description}</p>
           
-          {/* Key Feature */}
-          <div className="mb-8 sm:mb-10">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/15 backdrop-blur-sm border border-white/25">
-              <span className="text-white/90 text-sm font-medium">
-                {index === 0 && "🚀 Instant selling"}
-                {index === 1 && "💎 Save 50% on rides"}
-                {index === 2 && "🏠 Best locations"}
-                {index === 3 && "🎉 Never miss out"}
-              </span>
-            </div>
-          </div>
-
-          {/* Explore Button - Unified Style */}
+          {/* Explore Button - Clean Style */}
           <Button 
-            className="rounded-full px-8 sm:px-10 md:px-12 py-3 sm:py-4 bg-white hover:bg-gray-50 text-gray-800 border-none font-bold text-base sm:text-lg transition-all duration-300 hover:shadow-xl hover:scale-105 pointer-events-none relative overflow-hidden group/btn"
+            className="rounded-full px-6 py-2 bg-white/90 hover:bg-white text-gray-800 font-semibold text-sm transition-all duration-200 hover:shadow-md pointer-events-none"
             style={{ 
               color: accentColor 
             }}
           >
-            <span className="relative z-10 flex items-center">
-              Explore App
-              <span className="ml-2 group-hover/btn:translate-x-1 transition-transform duration-200">→</span>
-            </span>
-            <div className="absolute inset-0 bg-gradient-to-r opacity-0 group-hover/btn:opacity-10 transition-opacity duration-200" style={{ backgroundImage: `linear-gradient(90deg, ${accentColor}20, ${accentColor}40)` }}></div>
+            Explore App
           </Button>
         </CardContent>
       </Card>
@@ -134,7 +111,7 @@ export function AppCards() {
           viewport={{ once: true }}
         >
           <motion.h2 
-            className="text-4xl sm:text-5xl md:text-6xl font-black mb-4 sm:mb-6 gradient-uf-text"
+            className="text-4xl sm:text-5xl md:text-6xl font-black mb-6 sm:mb-8 gradient-uf-text"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -142,17 +119,6 @@ export function AppCards() {
           >
             Everything You Need
           </motion.h2>
-          <motion.div
-            className="mb-6 sm:mb-8"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            viewport={{ once: true }}
-          >
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-orange-100 to-blue-100 border border-orange-200">
-              <span className="text-orange-600 font-semibold text-sm">🔥 Most Popular Campus Platform</span>
-            </div>
-          </motion.div>
           <motion.p 
             className="text-xl sm:text-2xl text-gray-600 max-w-4xl mx-auto font-medium px-4 leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
@@ -186,9 +152,9 @@ export function AppCards() {
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-3">Ready to Transform Your Campus Life?</h3>
+            <h3 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-3">Ready to Simplify Your Campus Life?</h3>
             <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto font-medium">
-              Join 15,000+ students already saving time and money with our platform
+              Get started with our student-focused platform today
             </p>
           </motion.div>
           <motion.div
@@ -199,7 +165,7 @@ export function AppCards() {
           >
             <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
               <Button 
-                className="rounded-full px-8 sm:px-12 py-4 sm:py-5 text-lg sm:text-xl font-bold text-white bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 transition-all duration-300 hover:scale-105 hover:shadow-xl border-none"
+                className="rounded-full px-8 sm:px-12 py-4 sm:py-5 text-lg sm:text-xl font-bold text-white bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 transition-all duration-300 hover:scale-105 hover:shadow-xl"
                 onClick={() => {
                   const contactSection = document.getElementById('contact');
                   if (contactSection) {
@@ -207,7 +173,7 @@ export function AppCards() {
                   }
                 }}
               >
-                Join the Community
+                Get Started Today
               </Button>
               <p className="text-sm text-gray-500 sm:ml-4">Free to start • No credit card required</p>
             </div>
