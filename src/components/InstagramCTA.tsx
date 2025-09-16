@@ -22,7 +22,7 @@ export function InstagramCTA() {
           exit={{ y: 100, opacity: 0 }}
           transition={{ duration: 0.3, ease: "easeOut" }}
         >
-        <div className="bg-gradient-to-r from-orange-500 to-blue-600 rounded-2xl p-4 shadow-2xl border border-white/20 backdrop-blur-sm max-w-sm w-full mx-auto pointer-events-auto relative overflow-hidden">
+        <div className="bg-gradient-to-r from-orange-500 to-blue-600 rounded-2xl p-4 shadow-2xl border-2 border-white/50 backdrop-blur-sm max-w-sm w-full mx-auto pointer-events-auto relative overflow-hidden ring-2 ring-black/10">
           {/* Background Pattern */}
           <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent"></div>
           
@@ -42,8 +42,8 @@ export function InstagramCTA() {
             
             {/* Content */}
             <div className="flex-1">
-              <p className="text-white font-semibold text-sm mb-1">Follow us on Instagram!</p>
-              <p className="text-white/90 text-xs">@kampus.fun</p>
+              <p className="text-white font-semibold text-sm mb-1 drop-shadow-lg">Follow us on Instagram!</p>
+              <p className="text-white/95 text-xs font-medium drop-shadow-md">@kampus.fun</p>
             </div>
             
             {/* CTA Button */}
