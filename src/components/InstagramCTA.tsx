@@ -22,9 +22,9 @@ export function InstagramCTA() {
           exit={{ y: 100, opacity: 0 }}
           transition={{ duration: 0.3, ease: "easeOut" }}
         >
-        <div className="bg-white rounded-2xl p-4 shadow-2xl border-2 border-gray-300 backdrop-blur-sm max-w-sm w-full mx-auto pointer-events-auto relative overflow-hidden">
+        <div className="bg-white rounded-2xl p-5 shadow-2xl border-3 border-gray-400 backdrop-blur-sm max-w-sm w-full mx-auto pointer-events-auto relative overflow-hidden ring-4 ring-black/5">
           {/* Background Pattern */}
-          <div className="absolute inset-0 bg-gradient-to-br from-gray-50 to-white"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-25 to-white"></div>
           
           {/* Close Button */}
           <button 
@@ -36,19 +36,19 @@ export function InstagramCTA() {
 
           <div className="relative z-10 flex items-center space-x-3">
             {/* Instagram Icon */}
-            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-500 via-pink-500 to-orange-500 flex items-center justify-center shadow-xl border-2 border-white">
-              <Instagram size={24} className="text-white font-bold" strokeWidth={2.5} />
+            <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-600 via-pink-500 to-orange-400 flex items-center justify-center shadow-2xl border-3 border-white ring-2 ring-purple-200">
+              <Instagram size={28} className="text-white" strokeWidth={3} />
             </div>
             
             {/* Content */}
             <div className="flex-1">
-              <p className="text-black font-bold text-base mb-1">Follow us on Instagram!</p>
-              <p className="text-gray-700 text-sm font-bold">@kampus.fun</p>
+              <p className="text-gray-900 font-extrabold text-lg mb-1 tracking-tight">Follow us on Instagram!</p>
+              <p className="text-purple-700 text-base font-bold tracking-wide">@kampus.fun</p>
             </div>
             
             {/* CTA Button */}
             <Button 
-              className="rounded-full px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold text-sm transition-all duration-200 hover:scale-105 shadow-xl hover:shadow-2xl border-2 border-white"
+              className="rounded-full px-7 py-3.5 bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600 hover:from-purple-700 hover:via-pink-700 hover:to-purple-700 text-white font-extrabold text-base transition-all duration-200 hover:scale-110 shadow-2xl hover:shadow-3xl border-3 border-white ring-2 ring-purple-300"
               onClick={() => {
                 window.open('https://instagram.com/kampus.fun', '_blank', 'noopener,noreferrer');
               }}
