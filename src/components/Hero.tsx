@@ -122,7 +122,7 @@ export function Hero() {
               }
             }}
           >
-            Get Started - It's Free!
+            Get Started - It&apos;s Free!
             <ArrowRight size={20} className="ml-2" />
           </Button>
           

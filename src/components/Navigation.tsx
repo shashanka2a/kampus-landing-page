@@ -1,11 +1,6 @@
 "use client"
 
-import { Button } from "./ui/button";
-import { useState } from "react";
-import { Menu, X } from "lucide-react";
-
 export function Navigation() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-white border-b border-gray-200 shadow-sm">
