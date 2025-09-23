@@ -174,7 +174,7 @@ export function Hero() {
                 </div>
                 <span className="text-2xl font-bold bg-gradient-to-r from-green-600 to-green-700 bg-clip-text text-transparent">100%</span>
               </div>
-              <div className="text-sm text-gray-700 font-semibold">UF Verified</div>
+              <div className="text-sm text-gray-700 font-semibold">Edu Verified</div>
             </div>
           </div>
         </motion.div>

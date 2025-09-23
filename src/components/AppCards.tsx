@@ -35,11 +35,11 @@ function AppCard({ emoji, title, description, accentColor, gradient, url, index 
           
           {/* App Logo */}
           <motion.div 
-            className="w-16 h-16 rounded-2xl bg-white/30 backdrop-blur-sm flex items-center justify-center mb-4 mx-auto transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 shadow-sm"
+            className="w-20 h-20 rounded-3xl bg-white/90 backdrop-blur-md flex items-center justify-center mb-4 mx-auto transition-all duration-500 group-hover:scale-110 group-hover:rotate-6 shadow-lg border-2 border-white/50"
             whileHover={{ scale: 1.1, rotate: 6 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <span className="text-2xl group-hover:scale-110 transition-transform duration-300">{emoji}</span>
+            <span className="text-4xl group-hover:scale-110 transition-transform duration-300 drop-shadow-sm">{emoji}</span>
           </motion.div>
 
           {/* Title */}
