@@ -174,7 +174,7 @@ export function AppCards() {
           >
             <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
               <Button 
-                className="rounded-full px-8 sm:px-12 py-4 sm:py-5 text-lg sm:text-xl font-bold text-white bg-gradient-to-r from-orange-500 to-purple-600 hover:from-orange-600 hover:to-purple-700 transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                className="rounded-full px-8 sm:px-12 py-4 sm:py-5 text-lg sm:text-xl font-bold text-white bg-gradient-to-r from-orange-500 to-orange-700 hover:from-orange-600 hover:to-orange-800 transition-all duration-300 hover:scale-105 hover:shadow-xl"
                 onClick={() => {
                   const contactSection = document.getElementById('contact');
                   if (contactSection) {
@@ -182,7 +182,7 @@ export function AppCards() {
                   }
                 }}
               >
-                Get Started Today
+                Get Started Free
               </Button>
               <p className="text-sm text-gray-500 sm:ml-4">Free to start • No credit card required</p>
             </div>

@@ -2,7 +2,7 @@ import { Instagram, Mail, Heart } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white mt-16 sm:mt-20 md:mt-24 scroll-mt-24" id="contact">
+    <footer className="bg-gradient-to-r from-orange-700 via-orange-800 to-blue-900 text-white mt-16 sm:mt-20 md:mt-24 scroll-mt-24" id="contact">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 md:py-24">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 md:gap-16">
           {/* Brand Section */}
@@ -78,7 +78,7 @@ export function Footer() {
         </div>
 
         {/* Bottom Section */}
-        <div className="border-t border-gray-700 mt-8 sm:mt-12 pt-6 sm:pt-8 text-center">
+        <div className="border-t border-white/20 mt-8 sm:mt-12 pt-6 sm:pt-8 text-center">
           <div className="flex items-center justify-center space-x-2 text-gray-400 text-sm sm:text-base">
             <span>Made with</span>
             <Heart size={14} className="sm:w-4 sm:h-4 text-orange-500 fill-current" />
