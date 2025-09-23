@@ -115,7 +115,7 @@ export function InstagramCTA() {
               </motion.p>
             </div>
             
-            {/* Enhanced CTA Button */}
+            {/* Enhanced CTA Button — more explicit label and anchor semantics */}
             <motion.div
               animate={{
                 scale: isHovered ? 1.05 : 1,
@@ -123,24 +123,25 @@ export function InstagramCTA() {
               }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
             >
-              <Button 
-                className="rounded-full px-7 py-3.5 bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600 hover:from-purple-700 hover:via-pink-700 hover:to-purple-700 text-white font-extrabold text-base transition-all duration-200 shadow-2xl border-3 border-white ring-2 ring-purple-300 flex items-center gap-2"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  handleInstagramClick();
-                }}
+              <a
+                href="https://instagram.com/kampus.fun"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => e.stopPropagation()}
+                className="inline-flex items-center gap-2 rounded-full px-7 py-3.5 bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600 hover:from-purple-700 hover:via-pink-700 hover:to-purple-700 text-white font-extrabold text-base transition-all duration-200 shadow-2xl border-3 border-white ring-2 ring-purple-300 focus:outline-none focus:ring-4 focus:ring-purple-300/40"
               >
-                <span>Follow</span>
-                <motion.div
+                <span>Follow on Instagram</span>
+                <motion.span
                   animate={{
                     x: isHovered ? 2 : 0,
-                    opacity: isHovered ? 1 : 0.8
+                    opacity: isHovered ? 1 : 0.9
                   }}
                   transition={{ duration: 0.2 }}
+                  className="inline-flex"
                 >
                   <ExternalLink size={16} />
-                </motion.div>
-              </Button>
+                </motion.span>
+              </a>
             </motion.div>
           </div>
         </motion.div>

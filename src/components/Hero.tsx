@@ -66,40 +66,72 @@ export function Hero() {
             whileHover={{ y: -8, scale: 1.05 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
           >
-            <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-3xl bg-gradient-to-br from-orange-50 to-orange-100 flex flex-col items-center justify-center mx-auto shadow-lg group-hover:shadow-xl transition-all duration-300 border border-orange-200 group-hover:border-orange-300 group-hover:from-orange-100 group-hover:to-orange-200">
-              <span className="text-2xl sm:text-3xl mb-1 group-hover:scale-110 transition-transform duration-300">🛒</span>
-              <p className="text-xs font-bold text-orange-700 group-hover:text-orange-800 transition-colors duration-300">Shop</p>
-            </div>
+            <a
+              href="https://www.gatorex.shop/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Shop on GatorEx"
+              className="block rounded-3xl focus:outline-none focus:ring-4 focus:ring-orange-300/50"
+            >
+              <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-3xl bg-gradient-to-br from-orange-50 to-orange-100 flex flex-col items-center justify-center mx-auto shadow-lg group-hover:shadow-xl transition-all duration-300 border border-orange-200 group-hover:border-orange-300 group-hover:from-orange-100 group-hover:to-orange-200">
+                <span className="text-2xl sm:text-3xl mb-1 group-hover:scale-110 transition-transform duration-300">🛒</span>
+                <p className="text-xs font-bold text-orange-700 group-hover:text-orange-800 transition-colors duration-300">Shop</p>
+              </div>
+            </a>
           </motion.div>
           <motion.div 
             className="text-center group cursor-pointer"
             whileHover={{ y: -8, scale: 1.05 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
           >
-            <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-3xl bg-gradient-to-br from-blue-50 to-blue-100 flex flex-col items-center justify-center mx-auto shadow-lg group-hover:shadow-xl transition-all duration-300 border border-blue-200 group-hover:border-blue-300 group-hover:from-blue-100 group-hover:to-blue-200">
-              <span className="text-2xl sm:text-3xl mb-1 group-hover:scale-110 transition-transform duration-300">🚗</span>
-              <p className="text-xs font-bold text-blue-700 group-hover:text-blue-800 transition-colors duration-300">Ride</p>
-            </div>
+            <a
+              href="http://rydify.co/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Find rides with Rydify"
+              className="block rounded-3xl focus:outline-none focus:ring-4 focus:ring-blue-300/50"
+            >
+              <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-3xl bg-gradient-to-br from-blue-50 to-blue-100 flex flex-col items-center justify-center mx-auto shadow-lg group-hover:shadow-xl transition-all duration-300 border border-blue-200 group-hover:border-blue-300 group-hover:from-blue-100 group-hover:to-blue-200">
+                <span className="text-2xl sm:text-3xl mb-1 group-hover:scale-110 transition-transform duration-300">🚗</span>
+                <p className="text-xs font-bold text-blue-700 group-hover:text-blue-800 transition-colors duration-300">Ride</p>
+              </div>
+            </a>
           </motion.div>
           <motion.div 
             className="text-center group cursor-pointer"
             whileHover={{ y: -8, scale: 1.05 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
           >
-            <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-3xl bg-gradient-to-br from-orange-50 to-orange-100 flex flex-col items-center justify-center mx-auto shadow-lg group-hover:shadow-xl transition-all duration-300 border border-orange-200 group-hover:border-orange-300 group-hover:from-orange-100 group-hover:to-orange-200">
-              <span className="text-2xl sm:text-3xl mb-1 group-hover:scale-110 transition-transform duration-300">🏡</span>
-              <p className="text-xs font-bold text-orange-700 group-hover:text-orange-800 transition-colors duration-300">Live</p>
-            </div>
+            <a
+              href="https://www.vybr.club/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Find housing on Vybr"
+              className="block rounded-3xl focus:outline-none focus:ring-4 focus:ring-orange-300/50"
+            >
+              <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-3xl bg-gradient-to-br from-orange-50 to-orange-100 flex flex-col items-center justify-center mx-auto shadow-lg group-hover:shadow-xl transition-all duration-300 border border-orange-200 group-hover:border-orange-300 group-hover:from-orange-100 group-hover:to-orange-200">
+                <span className="text-2xl sm:text-3xl mb-1 group-hover:scale-110 transition-transform duration-300">🏡</span>
+                <p className="text-xs font-bold text-orange-700 group-hover:text-orange-800 transition-colors duration-300">Live</p>
+              </div>
+            </a>
           </motion.div>
           <motion.div 
             className="text-center group cursor-pointer"
             whileHover={{ y: -8, scale: 1.05 }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
           >
-            <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-3xl bg-gradient-to-br from-blue-50 to-blue-100 flex flex-col items-center justify-center mx-auto shadow-lg group-hover:shadow-xl transition-all duration-300 border border-blue-200 group-hover:border-blue-300 group-hover:from-blue-100 group-hover:to-blue-200">
-              <span className="text-2xl sm:text-3xl mb-1 group-hover:scale-110 transition-transform duration-300">🎉</span>
-              <p className="text-xs font-bold text-blue-700 group-hover:text-blue-800 transition-colors duration-300">Party</p>
-            </div>
+            <a
+              href="http://tribzy.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Discover events on Tribzy"
+              className="block rounded-3xl focus:outline-none focus:ring-4 focus:ring-blue-300/50"
+            >
+              <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-3xl bg-gradient-to-br from-blue-50 to-blue-100 flex flex-col items-center justify-center mx-auto shadow-lg group-hover:shadow-xl transition-all duration-300 border border-blue-200 group-hover:border-blue-300 group-hover:from-blue-100 group-hover:to-blue-200">
+                <span className="text-2xl sm:text-3xl mb-1 group-hover:scale-110 transition-transform duration-300">🎉</span>
+                <p className="text-xs font-bold text-blue-700 group-hover:text-blue-800 transition-colors duration-300">Party</p>
+              </div>
+            </a>
           </motion.div>
         </motion.div>
 
@@ -113,13 +145,13 @@ export function Hero() {
           {/* Primary CTA - More Vibrant Orange */}
           <Button 
             size="lg" 
-            className="relative text-lg sm:text-xl px-8 sm:px-12 py-4 sm:py-5 rounded-2xl bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 hover:from-orange-500 hover:via-orange-600 hover:to-orange-700 text-white font-bold transform transition-all duration-300 hover:scale-105 hover:shadow-2xl shadow-xl border-2 border-orange-300 hover:border-orange-400"
+            className="relative text-lg sm:text-xl px-8 sm:px-12 py-4 sm:py-5 rounded-2xl bg-gradient-to-r from-orange-500 via-orange-600 to-orange-700 hover:from-orange-600 hover:via-orange-700 hover:to-orange-800 text-white font-extrabold tracking-tight transform transition-all duration-300 hover:scale-105 hover:shadow-2xl shadow-xl border-2 border-orange-400 hover:border-orange-500 drop-shadow-[0_1px_0_rgba(0,0,0,0.4)]"
             onClick={() => {
               window.open('https://www.gatorex.shop/', '_blank');
             }}
           >
-            <span className="relative z-10">Browse Listings</span>
-            <ArrowRight size={20} className="ml-2 relative z-10" />
+            <span className="relative z-10 text-white/95">Browse Listings</span>
+            <ArrowRight size={20} className="ml-2 relative z-10 text-white/95" />
             {/* Enhanced glow effect */}
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-orange-300 to-orange-500 opacity-0 hover:opacity-30 transition-opacity duration-300 blur-md"></div>
           </Button>
