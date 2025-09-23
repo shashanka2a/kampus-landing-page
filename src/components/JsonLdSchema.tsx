@@ -40,6 +40,8 @@ export function JsonLdSchema() {
   return (
     <script
       type="application/ld+json"
+      // Prevent extension-injected attribute mismatches during hydration
+      suppressHydrationWarning
       dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
     />
   );

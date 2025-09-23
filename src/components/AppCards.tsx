@@ -23,11 +23,18 @@ function AppCard({ emoji, title, description, accentColor, gradient, url, index 
       transition={{ duration: 0.6, delay: index * 0.1 }}
       viewport={{ once: true }}
     >
-      <a 
-        href={url} 
-        target="_blank" 
-        rel="noopener noreferrer"
+      <div 
         className="block focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 rounded-3xl"
+        role="link"
+        aria-label={`Open ${title}`}
+        tabIndex={0}
+        onClick={() => window.open(url, '_blank', 'noopener,noreferrer')}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            window.open(url, '_blank', 'noopener,noreferrer');
+          }
+        }}
       >
         <Card 
           className={`group cursor-pointer transition-all duration-300 hover:scale-[1.02] hover:-translate-y-1 rounded-3xl border border-gray-200/60 shadow-lg overflow-hidden bg-white relative`}
@@ -71,7 +78,7 @@ function AppCard({ emoji, title, description, accentColor, gradient, url, index 
           </div>
         </CardContent>
       </Card>
-      </a>
+      </div>
     </motion.div>
   );
 }
