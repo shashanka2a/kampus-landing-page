@@ -20,42 +20,50 @@ export function Hero() {
       </div>
       
       <div className="max-w-6xl mx-auto px-6 text-center relative z-10">
-        {/* Trust Badge */}
+        {/* Enhanced Trust Badge */}
         <motion.div 
-          className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-orange-200 text-orange-700 px-4 py-2 rounded-full text-sm font-medium mb-8 shadow-lg"
+          className="inline-flex items-center gap-2 bg-gradient-to-r from-white/90 to-orange-50/90 backdrop-blur-sm border border-orange-200 text-orange-700 px-6 py-3 rounded-full text-sm font-semibold mb-8 shadow-xl hover:shadow-2xl transition-all duration-300"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
+          whileHover={{ scale: 1.05 }}
         >
-          <Shield size={16} className="text-orange-600" />
-          <span>Verified @ufl.edu Access • Trusted by 250+ Students</span>
+          <div className="p-1 rounded-full bg-gradient-to-br from-orange-100 to-orange-200">
+            <Shield size={16} className="text-orange-600" />
+          </div>
+          <span className="bg-gradient-to-r from-orange-600 to-orange-700 bg-clip-text text-transparent font-bold">
+            Verified @ufl.edu Access • Trusted by 250+ Students
+          </span>
         </motion.div>
 
-        {/* Main Headline - More Impactful */}
+        {/* Main Headline - Enhanced with Gradient */}
         <motion.h1 
           className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-6 leading-tight"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
         >
-          <span className="bg-gradient-to-r from-orange-600 via-blue-600 to-orange-600 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-orange-500 via-orange-600 to-blue-600 bg-clip-text text-transparent drop-shadow-sm">
             Your Campus,
           </span>
           <br />
-          <span className="text-gray-900">Simplified.</span>
+          <span className="bg-gradient-to-r from-blue-600 via-blue-700 to-orange-500 bg-clip-text text-transparent drop-shadow-sm">
+            Simplified.
+          </span>
         </motion.h1>
 
-        {/* Enhanced Sub-headline */}
+        {/* Enhanced Sub-headline with Better Visibility */}
         <motion.h2 
-          className="text-xl sm:text-2xl md:text-3xl font-semibold mb-8 max-w-4xl mx-auto text-gray-700 leading-relaxed"
+          className="text-xl sm:text-2xl md:text-3xl font-semibold mb-8 max-w-4xl mx-auto leading-relaxed"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
         >
-          <span className="text-orange-600 font-bold">Kampus.fun:</span> Connect, Buy, Sell, Ride, and Live Better at UF — All in One Place
+          <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent font-bold">Kampus.fun:</span> 
+          <span className="text-gray-800 font-medium"> Connect, Buy, Sell, Ride, and Live Better at UF — All in One Place</span>
         </motion.h2>
 
-        {/* Enhanced Feature Icons with Better Visual Weight */}
+        {/* Enhanced Feature Icons with Better Visual Hierarchy */}
         <motion.div
           className="flex justify-center items-center space-x-6 sm:space-x-8 mb-12"
           initial={{ opacity: 0, scale: 0.8 }}
@@ -64,57 +72,57 @@ export function Hero() {
         >
           <motion.div 
             className="text-center group cursor-pointer"
-            whileHover={{ y: -8, scale: 1.1 }}
-            transition={{ type: "spring", stiffness: 300 }}
+            whileHover={{ y: -12, scale: 1.15 }}
+            transition={{ type: "spring", stiffness: 300, damping: 20 }}
           >
-            <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-3xl bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center mb-3 mx-auto shadow-xl group-hover:shadow-2xl transition-all duration-300">
-              <span className="text-3xl sm:text-4xl">🛒</span>
+            <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-3xl bg-gradient-to-br from-orange-400 via-orange-500 to-orange-600 flex items-center justify-center mb-3 mx-auto shadow-xl group-hover:shadow-2xl transition-all duration-300 border-2 border-orange-200 group-hover:border-orange-300">
+              <span className="text-3xl sm:text-4xl group-hover:scale-110 transition-transform duration-300">🛒</span>
             </div>
-            <p className="text-sm font-bold text-gray-800">Shop</p>
+            <p className="text-sm font-bold text-gray-800 group-hover:text-orange-600 transition-colors duration-300">Shop</p>
           </motion.div>
           <motion.div 
             className="text-center group cursor-pointer"
-            whileHover={{ y: -8, scale: 1.1 }}
-            transition={{ type: "spring", stiffness: 300 }}
+            whileHover={{ y: -12, scale: 1.15 }}
+            transition={{ type: "spring", stiffness: 300, damping: 20 }}
           >
-            <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-3xl bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center mb-3 mx-auto shadow-xl group-hover:shadow-2xl transition-all duration-300">
-              <span className="text-3xl sm:text-4xl">🚗</span>
+            <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-3xl bg-gradient-to-br from-blue-500 via-blue-600 to-blue-800 flex items-center justify-center mb-3 mx-auto shadow-xl group-hover:shadow-2xl transition-all duration-300 border-2 border-blue-200 group-hover:border-blue-300">
+              <span className="text-3xl sm:text-4xl group-hover:scale-110 transition-transform duration-300">🚗</span>
             </div>
-            <p className="text-sm font-bold text-gray-800">Ride</p>
+            <p className="text-sm font-bold text-gray-800 group-hover:text-blue-600 transition-colors duration-300">Ride</p>
           </motion.div>
           <motion.div 
             className="text-center group cursor-pointer"
-            whileHover={{ y: -8, scale: 1.1 }}
-            transition={{ type: "spring", stiffness: 300 }}
+            whileHover={{ y: -12, scale: 1.15 }}
+            transition={{ type: "spring", stiffness: 300, damping: 20 }}
           >
-            <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-3xl bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center mb-3 mx-auto shadow-xl group-hover:shadow-2xl transition-all duration-300">
-              <span className="text-3xl sm:text-4xl">🏡</span>
+            <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-3xl bg-gradient-to-br from-orange-400 via-orange-500 to-orange-600 flex items-center justify-center mb-3 mx-auto shadow-xl group-hover:shadow-2xl transition-all duration-300 border-2 border-orange-200 group-hover:border-orange-300">
+              <span className="text-3xl sm:text-4xl group-hover:scale-110 transition-transform duration-300">🏡</span>
             </div>
-            <p className="text-sm font-bold text-gray-800">Live</p>
+            <p className="text-sm font-bold text-gray-800 group-hover:text-orange-600 transition-colors duration-300">Live</p>
           </motion.div>
           <motion.div 
             className="text-center group cursor-pointer"
-            whileHover={{ y: -8, scale: 1.1 }}
-            transition={{ type: "spring", stiffness: 300 }}
+            whileHover={{ y: -12, scale: 1.15 }}
+            transition={{ type: "spring", stiffness: 300, damping: 20 }}
           >
-            <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-3xl bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center mb-3 mx-auto shadow-xl group-hover:shadow-2xl transition-all duration-300">
-              <span className="text-3xl sm:text-4xl">🎉</span>
+            <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-3xl bg-gradient-to-br from-blue-500 via-blue-600 to-blue-800 flex items-center justify-center mb-3 mx-auto shadow-xl group-hover:shadow-2xl transition-all duration-300 border-2 border-blue-200 group-hover:border-blue-300">
+              <span className="text-3xl sm:text-4xl group-hover:scale-110 transition-transform duration-300">🎉</span>
             </div>
-            <p className="text-sm font-bold text-gray-800">Party</p>
+            <p className="text-sm font-bold text-gray-800 group-hover:text-blue-600 transition-colors duration-300">Party</p>
           </motion.div>
         </motion.div>
 
-        {/* Enhanced CTA Buttons */}
+        {/* Enhanced CTA Buttons with Premium Gradients */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
         >
-          {/* Primary CTA */}
+          {/* Primary CTA with Enhanced Gradient */}
           <Button 
             size="lg" 
-            className="relative text-lg sm:text-xl px-8 sm:px-12 py-4 sm:py-5 rounded-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold transform transition-all duration-300 hover:scale-105 hover:shadow-2xl shadow-xl"
+            className="relative text-lg sm:text-xl px-8 sm:px-12 py-4 sm:py-5 rounded-full bg-gradient-to-r from-orange-500 via-orange-600 to-orange-700 hover:from-orange-600 hover:via-orange-700 hover:to-orange-800 text-white font-bold transform transition-all duration-300 hover:scale-105 hover:shadow-2xl shadow-xl border-2 border-orange-400 hover:border-orange-500"
             onClick={() => {
               const appsSection = document.getElementById('apps');
               if (appsSection) {
@@ -122,50 +130,61 @@ export function Hero() {
               }
             }}
           >
-            Get Started - It&apos;s Free!
-            <ArrowRight size={20} className="ml-2" />
+            <span className="relative z-10">Get Started - It&apos;s Free!</span>
+            <ArrowRight size={20} className="ml-2 relative z-10" />
+            {/* Subtle glow effect */}
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-orange-400 to-orange-600 opacity-0 hover:opacity-20 transition-opacity duration-300 blur-sm"></div>
           </Button>
           
-          {/* Secondary CTA */}
+          {/* Secondary CTA with Gradient Border */}
           <Button 
             size="lg" 
             variant="outline"
-            className="text-lg sm:text-xl px-8 sm:px-12 py-4 sm:py-5 rounded-full border-2 border-blue-500 text-blue-600 hover:bg-blue-500 hover:text-white font-bold transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
+            className="relative text-lg sm:text-xl px-8 sm:px-12 py-4 sm:py-5 rounded-full border-2 border-transparent bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-border text-blue-600 hover:text-white font-bold transform transition-all duration-300 hover:scale-105 hover:shadow-xl"
+            style={{
+              background: 'linear-gradient(white, white) padding-box, linear-gradient(to right, #3b82f6, #2563eb) border-box',
+            }}
             onClick={() => {
               window.open('https://www.gatorex.shop/', '_blank');
             }}
           >
-            Browse Listings
+            <span className="relative z-10">Browse Listings</span>
           </Button>
         </motion.div>
 
-        {/* Social Proof Stats */}
+        {/* Enhanced Social Proof Stats */}
         <motion.div
           className="flex justify-center items-center space-x-8 sm:space-x-12 mb-8"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
         >
-          <div className="text-center">
-            <div className="flex items-center justify-center gap-1 mb-1">
-              <Users size={16} className="text-orange-600" />
-              <span className="text-2xl font-bold text-gray-900">250+</span>
+          <div className="text-center group">
+            <div className="flex items-center justify-center gap-2 mb-2">
+              <div className="p-2 rounded-full bg-gradient-to-br from-orange-100 to-orange-200 group-hover:from-orange-200 group-hover:to-orange-300 transition-all duration-300">
+                <Users size={18} className="text-orange-600" />
+              </div>
+              <span className="text-2xl font-bold bg-gradient-to-r from-orange-600 to-orange-700 bg-clip-text text-transparent">250+</span>
             </div>
-            <div className="text-sm text-gray-600 font-medium">Active Students</div>
+            <div className="text-sm text-gray-700 font-semibold">Active Students</div>
           </div>
-          <div className="text-center">
-            <div className="flex items-center justify-center gap-1 mb-1">
-              <Star size={16} className="text-yellow-500" />
-              <span className="text-2xl font-bold text-gray-900">4.9</span>
+          <div className="text-center group">
+            <div className="flex items-center justify-center gap-2 mb-2">
+              <div className="p-2 rounded-full bg-gradient-to-br from-yellow-100 to-yellow-200 group-hover:from-yellow-200 group-hover:to-yellow-300 transition-all duration-300">
+                <Star size={18} className="text-yellow-500" />
+              </div>
+              <span className="text-2xl font-bold bg-gradient-to-r from-yellow-500 to-yellow-600 bg-clip-text text-transparent">4.9</span>
             </div>
-            <div className="text-sm text-gray-600 font-medium">Average Rating</div>
+            <div className="text-sm text-gray-700 font-semibold">Average Rating</div>
           </div>
-          <div className="text-center">
-            <div className="flex items-center justify-center gap-1 mb-1">
-              <Shield size={16} className="text-green-600" />
-              <span className="text-2xl font-bold text-gray-900">100%</span>
+          <div className="text-center group">
+            <div className="flex items-center justify-center gap-2 mb-2">
+              <div className="p-2 rounded-full bg-gradient-to-br from-green-100 to-green-200 group-hover:from-green-200 group-hover:to-green-300 transition-all duration-300">
+                <Shield size={18} className="text-green-600" />
+              </div>
+              <span className="text-2xl font-bold bg-gradient-to-r from-green-600 to-green-700 bg-clip-text text-transparent">100%</span>
             </div>
-            <div className="text-sm text-gray-600 font-medium">UF Verified</div>
+            <div className="text-sm text-gray-700 font-semibold">UF Verified</div>
           </div>
         </motion.div>
 
