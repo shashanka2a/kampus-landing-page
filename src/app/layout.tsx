@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import { JsonLdSchema } from "../components/JsonLdSchema";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -12,9 +13,9 @@ export const viewport = "width=device-width, initial-scale=1";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://kampus.fun'),
-  title: "Kampus.fun - Campus Life Platform for UF Students",
-  description: "All-in-one campus hub for University of Florida students. Shop textbooks, split rides, find housing, and discover events with student-focused apps.",
-  keywords: ["University of Florida", "UF", "campus life", "student apps", "GatorEx", "Rydify", "Vybr", "Tribzy", "textbooks", "ride sharing", "student housing", "campus events", "Gainesville", "Gator students"],
+  title: "Kampus.fun – UF Student Marketplace | Buy, Sell & Connect on Campus",
+  description: "Kampus.fun is the trusted UF student marketplace for furniture, textbooks, rides, housing, and events. Verified @ufl.edu access only.",
+  keywords: ["University of Florida", "UF", "campus life", "student apps", "GatorEx", "Rydify", "Vybr", "Tribzy", "textbooks", "ride sharing", "student housing", "campus events", "Gainesville", "Gator students", "student platform", "campus marketplace"],
   authors: [{ name: "Kampus.fun Team" }],
   creator: "Kampus.fun",
   publisher: "Kampus.fun",
@@ -24,24 +25,24 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://kampus.fun",
     siteName: "Kampus.fun",
-    title: "Kampus.fun - Campus Life Platform for UF Students",
-    description: "All-in-one campus hub for University of Florida students. Shop textbooks, split rides, find housing, and discover events.",
-    // images: [
-    //   {
-    //     url: "/og-image.jpg",
-    //     width: 1200,
-    //     height: 630,
-    //     alt: "Kampus.fun - Campus Life Platform for UF Students",
-    //   },
-    // ],
+    title: "Kampus.fun – UF Student Marketplace | Buy, Sell & Connect on Campus",
+    description: "Kampus.fun is the trusted UF student marketplace for furniture, textbooks, rides, housing, and events. Verified @ufl.edu access only.",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Kampus.fun - Student Life Platform",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     site: "@kampusfun",
     creator: "@kampusfun",
-    title: "Kampus.fun - Campus Life Platform for UF Students",
-    description: "All-in-one campus hub for University of Florida students. Shop textbooks, split rides, find housing, and discover events.",
-    // images: ["/og-image.jpg"], // Add when og-image.jpg exists in public/
+    title: "Kampus.fun – UF Student Marketplace | Buy, Sell & Connect on Campus",
+    description: "Kampus.fun is the trusted UF student marketplace for furniture, textbooks, rides, housing, and events. Verified @ufl.edu access only.",
+    images: ["/og-image.jpg"],
   },
   verification: {
     google: "your-google-site-verification-code",
@@ -65,6 +66,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        <JsonLdSchema />
+      </head>
       <body
         className={`${poppins.variable} antialiased`}
       >
