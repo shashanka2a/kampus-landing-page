@@ -50,19 +50,23 @@ function AppCard({ emoji, title, description, accentColor, gradient, url, index 
           </motion.div>
 
           {/* Title */}
-          <h3 className="mb-2 text-gray-900 font-extrabold text-xl">{title}</h3>
+          <h3 className="mb-2 text-gray-900 font-extrabold text-2xl tracking-tight">{title}</h3>
 
           {/* Description */}
-          <p className="text-gray-600 mb-6 font-medium text-sm leading-relaxed">{description}</p>
+          <p className="text-gray-600 mb-7 font-medium text-base leading-relaxed">{description}</p>
           
           {/* Explore Button - Clean Style */}
           <div className="flex justify-center">
             <Button 
-              className="rounded-full px-6 py-2 bg-white text-[#0f3dff] border-2 border-[#0f3dff] hover:bg-[#0f3dff] hover:text-white font-bold text-sm transition-all duration-200 hover:shadow-lg pointer-events-none"
+              asChild
               variant="outline"
+              className="rounded-full px-6 py-2 font-bold text-sm transition-all duration-200 hover:shadow-lg"
+              style={{ color: accentColor, borderColor: accentColor }}
             >
-              Visit Project
-              <ExternalLink className="ml-1" size={16} />
+              <a href={url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center">
+                Visit Project
+                <ExternalLink className="ml-1" size={16} />
+              </a>
             </Button>
           </div>
         </CardContent>
