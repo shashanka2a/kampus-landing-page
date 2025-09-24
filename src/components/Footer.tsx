@@ -8,9 +8,7 @@ export function Footer() {
           {/* Brand Section */}
           <div>
             <div className="flex items-center space-x-3 mb-4 sm:mb-6">
-              <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl gradient-uf-primary flex items-center justify-center">
-                <span className="text-white font-bold text-base sm:text-lg">K</span>
-              </div>
+              <img src="/favicon.svg" alt="Kampus.fun logo" className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-white p-1" />
               <span className="text-xl sm:text-2xl font-bold">Kampus.fun</span>
             </div>
             <p className="text-gray-300 mb-4 sm:mb-6 max-w-md text-sm sm:text-base">
@@ -44,20 +42,19 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Product / Company / Support */}
           <div>
-            <h4 className="font-semibold mb-3 sm:mb-4 text-base sm:text-lg">Quick Links</h4>
+            <h4 className="font-semibold mb-3 sm:mb-4 text-base sm:text-lg">Product</h4>
             <ul className="space-y-2 sm:space-y-3">
-              <li><a href="#" className="text-gray-300 hover:text-orange-400 transition-colors text-sm sm:text-base">About Us</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-orange-400 transition-colors text-sm sm:text-base">Our Apps</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-orange-400 transition-colors text-sm sm:text-base">Support</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-orange-400 transition-colors text-sm sm:text-base">Privacy Policy</a></li>
+              <li><a href="/features" className="text-gray-300 hover:text-orange-400 transition-colors text-sm sm:text-base">Features</a></li>
+              <li><a href="/pricing" className="text-gray-300 hover:text-orange-400 transition-colors text-sm sm:text-base">Pricing</a></li>
+              <li><a href="/faq" className="text-gray-300 hover:text-orange-400 transition-colors text-sm sm:text-base">FAQ</a></li>
             </ul>
           </div>
 
           {/* Contact */}
           <div>
-            <h4 className="font-semibold mb-3 sm:mb-4 text-base sm:text-lg">Get in Touch</h4>
+            <h4 className="font-semibold mb-3 sm:mb-4 text-base sm:text-lg">Support</h4>
             <ul className="space-y-3 sm:space-y-4">
               <li>
                 <a 
@@ -85,8 +82,8 @@ export function Footer() {
         </div>
 
         {/* Bottom Section */}
-        <div className="border-t border-white/20 mt-8 sm:mt-12 pt-6 sm:pt-8 text-center">
-          <div className="flex items-center justify-center space-x-2 text-gray-400 text-sm sm:text-base">
+        <div className="border-t border-white/20 mt-8 sm:mt-10 pt-6 sm:pt-8 text-center">
+          <div className="flex items-center justify-center space-x-2 text-gray-300 text-sm sm:text-base">
             <span>Made with</span>
             <Heart size={14} className="sm:w-4 sm:h-4 text-orange-500 fill-current" />
             <span>by Gator students</span>

@@ -21,16 +21,17 @@ export function Navigation() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-5">
         <div className="flex items-center justify-between">
-          {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 rounded-xl bg-white flex items-center justify-center">
-              <span className="text-orange-600 font-bold">K</span>
-            </div>
+          {/* Logo (icon + wordmark) */}
+          <a href="/" className="flex items-center space-x-2 focus:outline-none focus:ring-4 focus:ring-white/30 rounded-lg">
+            <img src="/favicon.svg" alt="Kampus.fun logo" className="w-8 h-8 rounded-lg bg-white p-1" />
             <span className="text-lg sm:text-xl font-extrabold text-white tracking-tight">Kampus.fun</span>
-          </div>
+          </a>
 
           {/* Links */}
           <div className="hidden md:flex items-center gap-6">
+            <a href="/features" className="text-white/90 hover:text-white font-semibold transition-colors">Features</a>
+            <a href="/pricing" className="text-white/90 hover:text-white font-semibold transition-colors">Pricing</a>
+            <a href="/faq" className="text-white/90 hover:text-white font-semibold transition-colors">FAQ</a>
             <a href="#apps" className="text-white/90 hover:text-white font-semibold transition-colors">Our Apps</a>
             <a href="#contact" className="text-white/90 hover:text-white font-semibold transition-colors">Contact</a>
           </div>
