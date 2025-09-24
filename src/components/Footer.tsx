@@ -4,9 +4,9 @@ export function Footer() {
   return (
     <footer className="bg-gradient-to-r from-orange-700 via-orange-800 to-blue-900 text-white mt-16 sm:mt-20 md:mt-24 scroll-mt-24" id="contact">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 md:py-24">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 md:gap-16">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-12 md:gap-16">
           {/* Brand Section */}
-          <div className="sm:col-span-2 lg:col-span-2">
+          <div>
             <div className="flex items-center space-x-3 mb-4 sm:mb-6">
               <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl gradient-uf-primary flex items-center justify-center">
                 <span className="text-white font-bold text-base sm:text-lg">K</span>
@@ -18,22 +18,29 @@ export function Footer() {
               Making university life easier, one app at a time.
             </p>
             
-            {/* Social Links */}
-            <div className="flex justify-center sm:justify-start space-x-4 sm:space-x-6">
-              <a 
-                href="https://instagram.com/kampus.fun" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/10 hover:bg-orange-500 flex items-center justify-center transition-all duration-300 hover:scale-110"
-              >
-                <Instagram size={18} className="sm:w-[20px] sm:h-[20px]" />
-              </a>
-              <a 
-                href="mailto:kampus.fun@gmail.com"
-                className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/10 hover:bg-green-500 flex items-center justify-center transition-all duration-300 hover:scale-110"
-              >
-                <Mail size={18} className="sm:w-[20px] sm:h-[20px]" />
-              </a>
+            {/* Stay Connected */}
+            <div className="mt-6">
+              <h4 className="font-semibold mb-3 text-base sm:text-lg">Stay Connected</h4>
+              <div className="flex items-center gap-4">
+                <a 
+                  href="https://instagram.com/kampus.fun" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full px-4 py-2 bg-white/10 hover:bg-white/15 transition-all duration-300 hover:scale-105"
+                  aria-label="Follow us on Instagram"
+                >
+                  <Instagram size={18} />
+                  <span>@kampus.fun</span>
+                </a>
+                <a 
+                  href="mailto:kampus.fun@gmail.com"
+                  className="inline-flex items-center gap-2 rounded-full px-4 py-2 bg-white/10 hover:bg-white/15 transition-all duration-300 hover:scale-105"
+                  aria-label="Email Kampus"
+                >
+                  <Mail size={18} />
+                  <span>Contact</span>
+                </a>
+              </div>
             </div>
           </div>
 

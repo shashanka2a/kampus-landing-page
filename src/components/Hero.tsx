@@ -75,7 +75,8 @@ export function Hero() {
             >
               <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-3xl bg-gradient-to-br from-orange-50 to-orange-100 flex flex-col items-center justify-center mx-auto shadow-lg group-hover:shadow-xl transition-all duration-300 border border-orange-200 group-hover:border-orange-300 group-hover:from-orange-100 group-hover:to-orange-200">
                 <span className="text-2xl sm:text-3xl mb-1 group-hover:scale-110 transition-transform duration-300">🛒</span>
-                <p className="text-xs font-bold text-orange-700 group-hover:text-orange-800 transition-colors duration-300">Shop</p>
+              <p className="text-xs font-bold text-orange-700 group-hover:text-orange-800 transition-colors duration-300">Shop</p>
+              <p className="text-[10px] text-orange-800/80 mt-0.5">Textbooks • Furniture</p>
               </div>
             </a>
           </motion.div>
@@ -93,7 +94,8 @@ export function Hero() {
             >
               <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-3xl bg-gradient-to-br from-blue-50 to-blue-100 flex flex-col items-center justify-center mx-auto shadow-lg group-hover:shadow-xl transition-all duration-300 border border-blue-200 group-hover:border-blue-300 group-hover:from-blue-100 group-hover:to-blue-200">
                 <span className="text-2xl sm:text-3xl mb-1 group-hover:scale-110 transition-transform duration-300">🚗</span>
-                <p className="text-xs font-bold text-blue-700 group-hover:text-blue-800 transition-colors duration-300">Ride</p>
+              <p className="text-xs font-bold text-blue-700 group-hover:text-blue-800 transition-colors duration-300">Ride</p>
+              <p className="text-[10px] text-blue-800/80 mt-0.5">Rideshare</p>
               </div>
             </a>
           </motion.div>
@@ -111,7 +113,8 @@ export function Hero() {
             >
               <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-3xl bg-gradient-to-br from-orange-50 to-orange-100 flex flex-col items-center justify-center mx-auto shadow-lg group-hover:shadow-xl transition-all duration-300 border border-orange-200 group-hover:border-orange-300 group-hover:from-orange-100 group-hover:to-orange-200">
                 <span className="text-2xl sm:text-3xl mb-1 group-hover:scale-110 transition-transform duration-300">🏡</span>
-                <p className="text-xs font-bold text-orange-700 group-hover:text-orange-800 transition-colors duration-300">Live</p>
+              <p className="text-xs font-bold text-orange-700 group-hover:text-orange-800 transition-colors duration-300">Live</p>
+              <p className="text-[10px] text-orange-800/80 mt-0.5">Housing</p>
               </div>
             </a>
           </motion.div>
@@ -129,7 +132,8 @@ export function Hero() {
             >
               <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-3xl bg-gradient-to-br from-blue-50 to-blue-100 flex flex-col items-center justify-center mx-auto shadow-lg group-hover:shadow-xl transition-all duration-300 border border-blue-200 group-hover:border-blue-300 group-hover:from-blue-100 group-hover:to-blue-200">
                 <span className="text-2xl sm:text-3xl mb-1 group-hover:scale-110 transition-transform duration-300">🎉</span>
-                <p className="text-xs font-bold text-blue-700 group-hover:text-blue-800 transition-colors duration-300">Party</p>
+              <p className="text-xs font-bold text-blue-700 group-hover:text-blue-800 transition-colors duration-300">Party</p>
+              <p className="text-[10px] text-blue-800/80 mt-0.5">Events</p>
               </div>
             </a>
           </motion.div>
