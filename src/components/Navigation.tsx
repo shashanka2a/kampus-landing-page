@@ -1,6 +1,8 @@
 "use client"
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
 import { Shield, Check } from "lucide-react";
 
 export function Navigation() {
@@ -22,10 +24,10 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-5">
         <div className="flex items-center justify-between">
           {/* Logo (icon + wordmark) */}
-          <a href="/" className="flex items-center space-x-2 focus:outline-none focus:ring-4 focus:ring-white/30 rounded-lg">
-            <img src="/favicon.svg" alt="Kampus.fun logo" className="w-8 h-8 rounded-lg bg-white p-1" />
+          <Link href="/" className="flex items-center space-x-2 focus:outline-none focus:ring-4 focus:ring-white/30 rounded-lg">
+            <Image src="/favicon.svg" alt="Kampus.fun logo" width={32} height={32} className="rounded-lg bg-white p-1" />
             <span className="text-lg sm:text-xl font-extrabold text-white tracking-tight">Kampus.fun</span>
-          </a>
+          </Link>
 
           {/* Links */}
           <div className="hidden md:flex items-center gap-6">

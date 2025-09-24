@@ -1,4 +1,5 @@
 import { Instagram, Mail, Heart } from "lucide-react";
+import Image from "next/image";
 
 export function Footer() {
   return (
@@ -8,7 +9,7 @@ export function Footer() {
           {/* Brand Section */}
           <div>
             <div className="flex items-center space-x-3 mb-4 sm:mb-6">
-              <img src="/favicon.svg" alt="Kampus.fun logo" className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-white p-1" />
+              <Image src="/favicon.svg" alt="Kampus.fun logo" width={40} height={40} className="rounded-lg bg-white p-1" />
               <span className="text-xl sm:text-2xl font-bold">Kampus.fun</span>
             </div>
             <p className="text-gray-300 mb-4 sm:mb-6 max-w-md text-sm sm:text-base">

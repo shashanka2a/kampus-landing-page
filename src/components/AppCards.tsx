@@ -10,12 +10,11 @@ interface AppCardProps {
   title: string;
   description: string;
   accentColor: string;
-  gradient: string;
   url: string;
   index: number;
 }
 
-function AppCard({ emoji, title, description, accentColor, gradient, url, index }: AppCardProps) {
+function AppCard({ emoji, title, description, accentColor, url, index }: AppCardProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}

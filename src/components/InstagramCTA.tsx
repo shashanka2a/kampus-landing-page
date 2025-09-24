@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Instagram, X, ExternalLink } from "lucide-react";
-import { Button } from "./ui/button";
+// import { Button } from "./ui/button";
 import { motion, AnimatePresence } from "motion/react";
 
 export function InstagramCTA() {
