@@ -23,10 +23,16 @@ export function Navigation() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 rounded-xl bg-white/20 flex items-center justify-center">
-              <span className="text-white font-bold">K</span>
+            <div className="w-8 h-8 rounded-xl bg-white flex items-center justify-center">
+              <span className="text-orange-600 font-bold">K</span>
             </div>
-            <span className="text-lg sm:text-xl font-bold text-white">Kampus.fun</span>
+            <span className="text-lg sm:text-xl font-extrabold text-white tracking-tight">Kampus.fun</span>
+          </div>
+
+          {/* Links */}
+          <div className="hidden md:flex items-center gap-6">
+            <a href="#apps" className="text-white/90 hover:text-white font-semibold transition-colors">Our Apps</a>
+            <a href="#contact" className="text-white/90 hover:text-white font-semibold transition-colors">Contact</a>
           </div>
 
           {/* Trust Badge */}
