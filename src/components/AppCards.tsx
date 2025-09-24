@@ -37,15 +37,15 @@ function AppCard({ emoji, title, description, accentColor, gradient, url, index 
         }}
       >
         <Card 
-          className={`group cursor-pointer transition-all duration-300 hover:scale-[1.02] hover:-translate-y-1 rounded-3xl border border-gray-200/60 shadow-lg overflow-hidden bg-white relative`}
+          className={`group cursor-pointer transition-all duration-300 hover:-translate-y-1 rounded-3xl border border-gray-200/60 shadow-md overflow-hidden relative bg-gradient-to-br from-white to-slate-50`}
         >
         {/* Gradient hover overlay */}
-        <div className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ background: "linear-gradient(135deg, rgba(59,130,246,0.08), rgba(168,85,247,0.08))" }} />
-        <CardContent className="p-8 text-center relative">
+        <div className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ background: "linear-gradient(135deg, rgba(255,90,31,0.08), rgba(124,58,237,0.08))" }} />
+        <CardContent className="p-9 text-center relative">
           
           {/* App Logo */}
           <motion.div 
-            className="w-20 h-20 rounded-3xl bg-white/95 backdrop-blur-md flex items-center justify-center mb-5 mx-auto transition-all duration-500 group-hover:scale-110 group-hover:rotate-2 shadow-xl border"
+            className="w-24 h-24 rounded-3xl bg-white/95 backdrop-blur-md flex items-center justify-center mb-6 mx-auto transition-all duration-500 group-hover:scale-110 group-hover:rotate-1 shadow-xl border"
             whileHover={{ scale: 1.1, rotate: 6 }}
             transition={{ type: "spring", stiffness: 300 }}
             style={{ 
@@ -53,7 +53,7 @@ function AppCard({ emoji, title, description, accentColor, gradient, url, index 
               boxShadow: `0 12px 28px ${accentColor}33, 0 4px 10px ${accentColor}26`
             }}
           >
-            <span className="text-4xl group-hover:scale-110 transition-transform duration-300 drop-shadow-md">{emoji}</span>
+            <span className="text-5xl group-hover:scale-110 transition-transform duration-300 drop-shadow-md">{emoji}</span>
           </motion.div>
 
           {/* Title */}
@@ -66,12 +66,10 @@ function AppCard({ emoji, title, description, accentColor, gradient, url, index 
           <div className="flex justify-center">
             <Button 
               asChild
-              variant="outline"
-              className="rounded-full px-6 py-2 font-bold text-sm transition-all duration-200 hover:shadow-lg"
-              style={{ color: accentColor, borderColor: accentColor }}
+              className="rounded-full px-7 py-3 font-bold text-sm transition-all duration-200 bg-[#FF5A1F] hover:brightness-105 hover:shadow-[0_10px_25px_rgba(255,90,31,0.35)] text-white"
             >
               <a href={url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center">
-                Visit Project
+                Explore
                 <ExternalLink className="ml-1" size={16} />
               </a>
             </Button>
